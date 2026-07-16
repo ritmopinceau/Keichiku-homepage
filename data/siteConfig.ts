@@ -104,6 +104,7 @@ export const headerNav: NavItem[] = [
   },
   { label: "施工事例", href: "/projects" },
   { label: "物件情報", href: "/properties" },
+  { label: "コラム", href: "/columns" },
   { label: "会社案内", href: "/company" },
   { label: "お問い合わせ", href: "/contact" },
 ];
@@ -112,6 +113,7 @@ export const footerNav: NavItem[] = [
   { label: "個人のお客様", href: "/personal" },
   { label: "法人のお客様", href: "/corporate" },
   { label: "不動産", href: "/realestate" },
+  { label: "コラム", href: "/columns" },
   { label: "施工事例", href: "/projects" },
   { label: "物件情報", href: "/properties" },
   { label: "会社案内", href: "/company" },

@@ -66,6 +66,41 @@ export interface ProjectCase {
   staffComment: string;
 }
 
+export interface PriceRange {
+  label: string;
+  price: string;
+}
+
+export interface SubServiceFaqItem {
+  id: string;
+  question: string;
+  answer: string;
+}
+
+/**
+ * サービス詳細ページ(ServiceDetail)の下にぶら下がる、工事内容別ページ。
+ * 例: 個人のお客様 > 住宅リフォーム > キッチンリフォーム
+ * ページ数が増えてもこの型に沿ってデータを追加するだけで済むようにしている。
+ */
+export interface SubService {
+  parentCategory: BusinessCategory;
+  parentSlug: string;
+  slug: string;
+  title: string;
+  englishLabel: string;
+  icon: string;
+  shortSummary: string;
+  heroImage: string;
+  heroImageAlt: string;
+  overview: string[];
+  painPoints: string[];
+  workScopeItems: string[];
+  priceRanges: PriceRange[];
+  faqItems: SubServiceFaqItem[];
+  relatedProjectCategory: string;
+  metaDescription: string;
+}
+
 export type PropertyDealType = "sale" | "rent";
 
 export interface PropertyItem {
@@ -106,4 +141,27 @@ export interface NewsItem {
   category: NewsCategory;
   title: string;
   href?: string;
+}
+
+export type ColumnCategory = "費用・相場" | "補助金・制度" | "会社選び" | "工事の基礎知識" | "リノベーション";
+
+export interface ColumnSection {
+  heading: string;
+  paragraphs: string[];
+}
+
+export interface ColumnArticle {
+  slug: string;
+  title: string;
+  category: ColumnCategory;
+  publishedAt: string;
+  updatedAt?: string;
+  excerpt: string;
+  heroImage: string;
+  heroImageAlt: string;
+  sections: ColumnSection[];
+  relatedServiceHref?: string;
+  relatedServiceLabel?: string;
+  faqItems?: SubServiceFaqItem[];
+  metaDescription: string;
 }

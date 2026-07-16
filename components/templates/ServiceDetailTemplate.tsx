@@ -13,6 +13,7 @@ import type { ServiceDetail, ProjectCase, PropertyItem } from "@/data/types";
 import { getFaqByIds } from "@/data/faq";
 import { defaultFlowSteps } from "@/data/services";
 import { serviceStrengthImages } from "@/data/placeholderImages";
+import { siteConfig } from "@/data/siteConfig";
 
 interface ServiceDetailTemplateProps {
   service: ServiceDetail;
@@ -22,7 +23,8 @@ interface ServiceDetailTemplateProps {
 }
 
 /**
- * 個人/法人/不動産の全9サービス詳細ページで共通利用するテンプレート。
+ * 個人/法人/不動産の各サービス詳細ページで共通利用するテンプレート
+ * (住宅リフォームのみ、より作り込んだCV最適化ページのため独自実装)。
  * 内容はすべて data/services.ts から受け取り、この共通レイアウトに流し込む。
  */
 export default function ServiceDetailTemplate({
@@ -34,8 +36,23 @@ export default function ServiceDetailTemplate({
   const faqItems = getFaqByIds(service.faqIds);
   const isRealEstate = service.category === "realestate";
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: service.title,
+    name: `${service.title}｜${siteConfig.siteName}`,
+    description: service.metaDescription,
+    provider: {
+      "@type": "GeneralContractor",
+      name: siteConfig.company.name,
+      telephone: siteConfig.company.phoneDisplay,
+    },
+    areaServed: siteConfig.company.city,
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
       <PageHero
         title={service.title}
         englishLabel={service.englishLabel}

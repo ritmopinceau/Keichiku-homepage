@@ -3,12 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import * as Icons from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { ArrowRight, Mail, Phone, MessageCircle, CheckCircle2, Star } from "lucide-react";
+import { ArrowRight, Mail, Phone, MessageCircle, Star } from "lucide-react";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import SectionTitle from "@/components/sections/SectionTitle";
 import Reveal from "@/components/sections/Reveal";
 import FaqAccordion from "@/components/sections/FaqAccordion";
+import FreeBadges from "@/components/sections/FreeBadges";
 import { getService } from "@/data/services";
+import { getSubServicesByParent } from "@/data/subServices";
 import { projects } from "@/data/projects";
 import type { ProjectCase } from "@/data/types";
 import { reformLifestyleImages, testimonialImages, staffPhotoImages, contactBannerImage } from "@/data/placeholderImages";
@@ -16,7 +18,6 @@ import { siteConfig } from "@/data/siteConfig";
 import {
   reformWorries,
   reformTrustPoints,
-  reformMenuItems,
   reformFlowSteps,
   reformFaqItems,
   reformChoiceReasons,
@@ -41,32 +42,11 @@ function hasBeforeAfter(project: ProjectCase): project is ProjectCase & { before
   return Boolean(project.beforeImage && project.afterImage);
 }
 
-/** ご相談・現地調査・お見積りが無料であることを繰り返し伝えるバッジ列 */
-function FreeBadges() {
-  const items = [
-    { label: "ご相談無料" },
-    { label: "現地調査無料" },
-    { label: "お見積り無料" },
-  ];
-  return (
-    <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-      {items.map((item) => (
-        <div
-          key={item.label}
-          className="flex items-center gap-2 bg-white rounded-full border border-gold/30 shadow-card px-5 py-2.5"
-        >
-          <CheckCircle2 size={18} className="text-gold-dark" aria-hidden />
-          <span className="text-sm md:text-base font-bold text-charcoal-dark">{item.label}</span>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 export default function PersonalReformPage() {
   if (!service) return notFound();
 
   const beforeAfterProjects = projects.filter(hasBeforeAfter);
+  const reformSubServices = getSubServicesByParent("personal", "reform");
 
   return (
     <>
@@ -233,16 +213,19 @@ export default function PersonalReformPage() {
             <SectionTitle en="Menu" ja="対応工事メニュー" />
           </Reveal>
           <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-6">
-            {reformMenuItems.map((item, index) => {
-              const IconComponent = getIcon(item.icon);
+            {reformSubServices.map((sub, index) => {
+              const IconComponent = getIcon(sub.icon);
               return (
-                <Reveal key={item.label} delayMs={index * 40}>
-                  <div className="flex flex-col items-center text-center gap-4 bg-white rounded-card shadow-card border border-black/5 p-8 h-full hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
+                <Reveal key={sub.slug} delayMs={index * 40}>
+                  <Link
+                    href={`/personal/reform/${sub.slug}`}
+                    className="flex flex-col items-center text-center gap-4 bg-white rounded-card shadow-card border border-black/5 p-8 h-full hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
+                  >
                     <div className="w-14 h-14 rounded-full bg-gold/10 text-gold-dark flex items-center justify-center shrink-0">
                       <IconComponent size={26} aria-hidden />
                     </div>
-                    <p className="font-bold text-charcoal-dark">{item.label}</p>
-                  </div>
+                    <p className="font-bold text-charcoal-dark">{sub.title}</p>
+                  </Link>
                 </Reveal>
               );
             })}

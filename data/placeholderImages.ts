@@ -84,3 +84,16 @@ export const staffPhotoImages = [
   unsplash("photo-1500648767791-00dcc994a43e", 400),
   unsplash("photo-1633332755192-727a05c4013d", 400),
 ];
+
+// 住宅リフォームの工事内容別ページ(kitchen/bath/toilet 等)で使用する画像
+export const subServiceImages = {
+  washroom: unsplash("photo-1620626011761-996317b8d101"),
+  wallPainting: unsplash("photo-1605146768851-eda79da39897"),
+  roof: unsplash("photo-1592595896616-c37162298647"),
+  insulation: unsplash("photo-1584622781564-1d987f7333c1"),
+  windows: unsplash("photo-1600210492493-0946911123ea"),
+  barrierFree: unsplash("photo-1531835551805-16d864c8d311"),
+  fullReform: unsplash("photo-1626885930974-4b69aa21bbf9"),
+  usedHomeReform: unsplash("photo-1518780664697-55e3ad937233"),
+  mansionReform: unsplash("photo-1502672260266-1c1ef2d93688"),
+};

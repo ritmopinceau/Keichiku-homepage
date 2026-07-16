@@ -24,20 +24,6 @@ export const reformTrustPoints: { icon: string; label: string }[] = [
   { icon: "Percent", label: "補助金相談対応" },
 ];
 
-export const reformMenuItems: { icon: string; label: string }[] = [
-  { icon: "ChefHat", label: "キッチン" },
-  { icon: "Bath", label: "浴室" },
-  { icon: "Droplets", label: "トイレ" },
-  { icon: "Sparkles", label: "洗面所" },
-  { icon: "Paintbrush", label: "内装" },
-  { icon: "PaintRoller", label: "外壁塗装" },
-  { icon: "Home", label: "屋根工事" },
-  { icon: "Thermometer", label: "窓・断熱" },
-  { icon: "LayoutGrid", label: "間取り変更" },
-  { icon: "Accessibility", label: "バリアフリー" },
-  { icon: "Building2", label: "全面リフォーム" },
-];
-
 export const reformFlowSteps: { icon: string; step: number; title: string }[] = [
   { icon: "Phone", step: 1, title: "お問い合わせ" },
   { icon: "Search", step: 2, title: "現地調査" },
