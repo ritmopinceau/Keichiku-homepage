@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CheckCircle2, HelpCircle } from "lucide-react";
 import PageHero from "@/components/sections/PageHero";
 import SectionTitle from "@/components/sections/SectionTitle";
@@ -11,6 +12,7 @@ import type { BreadcrumbItem } from "@/components/layout/Breadcrumbs";
 import type { ServiceDetail, ProjectCase, PropertyItem } from "@/data/types";
 import { getFaqByIds } from "@/data/faq";
 import { defaultFlowSteps } from "@/data/services";
+import { serviceStrengthImages } from "@/data/placeholderImages";
 
 interface ServiceDetailTemplateProps {
   service: ServiceDetail;
@@ -107,6 +109,15 @@ export default function ServiceDetailTemplate({
             {service.strengths.map((strength, index) => (
               <Reveal key={strength.title} delayMs={index * 80}>
                 <div className="text-center">
+                  <div className="relative h-36 w-full rounded-sm overflow-hidden mb-4">
+                    <Image
+                      src={serviceStrengthImages[index % serviceStrengthImages.length]}
+                      alt=""
+                      fill
+                      sizes="(min-width: 640px) 33vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
                   <p className="text-gold-light font-display italic text-2xl mb-2">{`0${index + 1}`}</p>
                   <h3 className="text-white font-bold mb-2">{strength.title}</h3>
                   <p className="text-white/70 text-sm leading-relaxed">{strength.description}</p>

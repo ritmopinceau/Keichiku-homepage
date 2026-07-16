@@ -4,7 +4,7 @@ import SectionTitle from "@/components/sections/SectionTitle";
 import Reveal from "@/components/sections/Reveal";
 import ContactBanner from "@/components/sections/ContactBanner";
 import { siteConfig } from "@/data/siteConfig";
-import { companyImage, heroImages } from "@/data/placeholderImages";
+import { companyImage, companyPhilosophyImage, heroImages } from "@/data/placeholderImages";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata({
@@ -68,6 +68,15 @@ export default function CompanyPage() {
         <div className="container-content max-w-3xl text-center">
           <Reveal>
             <SectionTitle en="Philosophy" ja="会社の理念" />
+            <div className="relative h-52 md:h-64 w-full rounded-sm overflow-hidden mb-8">
+              <Image
+                src={companyPhilosophyImage}
+                alt="当社が手がける建築のイメージ"
+                fill
+                sizes="(min-width: 768px) 768px, 100vw"
+                className="object-cover"
+              />
+            </div>
             <p className="text-base md:text-lg font-semibold text-charcoal-dark leading-relaxed">
               「建てる、直す、活かす。」建築と不動産の両輪で、地域のお客様の暮らしと事業に寄り添い、
               建物と土地の価値を未来へつなぎます。

@@ -35,6 +35,15 @@ export const strengthImages = {
   localSupport: unsplash("photo-1449844908441-8829872d2607", 800),
 };
 
+// サービス詳細ページ「当社の強み」欄で、強み1〜3個目に順番に割り当てる写真
+export const serviceStrengthImages = [
+  unsplash("photo-1556909114-f6e7ad7d3136", 800),
+  unsplash("photo-1486406146926-c627a92ad1ab", 800),
+  unsplash("photo-1449844908441-8829872d2607", 800),
+];
+
+export const companyPhilosophyImage = unsplash("photo-1493809842364-78817add7ffb", 1600);
+
 export const projectImages = [
   unsplash("photo-1600607687939-ce8a6c25118c"),
   unsplash("photo-1600585154526-990dced4db0d"),
