@@ -17,7 +17,8 @@ export function buildMetadata({ title, description, path, image }: BuildMetadata
   const ogImage = image ?? siteConfig.ogImage;
 
   return {
-    title: `${title}｜${siteConfig.siteName}`,
+    // ルートレイアウトの title.template (%s｜サイト名) が自動的に付与するため、ここでは付けない
+    title,
     description,
     alternates: {
       canonical: url,
