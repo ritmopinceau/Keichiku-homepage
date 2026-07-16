@@ -142,8 +142,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 施工事例 */}
-      <section className="py-16 md:py-24 bg-greige-light">
+      {/* 施工事例(スマートフォンではスクロールを短くするため非表示、md以上で表示) */}
+      <section className="hidden md:block py-16 md:py-24 bg-greige-light">
         <div className="container-content">
           <Reveal>
             <SectionTitle en="Works" ja="施工事例" description="これまでの施工事例の一部をご紹介します。" />
@@ -167,8 +167,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 不動産物件情報 */}
-      <section className="py-16 md:py-24">
+      {/* 不動産物件情報(スマートフォンではスクロールを短くするため非表示、md以上で表示) */}
+      <section className="hidden md:block py-16 md:py-24">
         <div className="container-content">
           <Reveal>
             <SectionTitle en="Properties" ja="不動産物件情報" description="売買・賃貸の新着物件情報をご紹介します。" />
