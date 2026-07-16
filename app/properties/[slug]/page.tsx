@@ -40,35 +40,35 @@ export default function PropertyDetailPage({ params }: { params: { slug: string 
 
       <article className="py-10 md:py-16">
         <div className="container-content max-w-4xl">
-          <span className={`inline-block text-xs font-semibold text-white px-2.5 py-1 rounded-sm mb-3 ${property.dealType === "sale" ? "bg-navy" : "bg-gold-dark"}`}>
+          <span className={`inline-block text-xs font-semibold text-white px-3 py-1.5 rounded-full mb-4 ${property.dealType === "sale" ? "bg-navy" : "bg-gold-dark"}`}>
             {dealLabel}
           </span>
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-charcoal-dark mb-2">{property.name}</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal-dark mb-3 leading-tight text-balance">{property.name}</h1>
           <p className="flex items-center gap-1.5 text-sm text-charcoal-light mb-6">
             <MapPin size={15} aria-hidden />
             {property.location}
           </p>
 
-          <div className="relative h-64 md:h-[420px] w-full rounded-sm overflow-hidden mb-4">
+          <div className="relative h-64 md:h-[440px] w-full rounded-card overflow-hidden mb-4">
             <Image src={property.mainImage} alt={property.mainImageAlt} fill sizes="(min-width: 768px) 800px, 100vw" className="object-cover" priority />
           </div>
 
           {property.images.length > 1 && (
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-10">
               {property.images.map((image) => (
-                <div key={image.src + image.alt} className="relative h-32 sm:h-40 rounded-sm overflow-hidden">
+                <div key={image.src + image.alt} className="relative h-32 sm:h-40 rounded-card overflow-hidden">
                   <Image src={image.src} alt={image.alt} fill sizes="33vw" className="object-cover" />
                 </div>
               ))}
             </div>
           )}
 
-          <div className="bg-navy text-white rounded-sm p-6 mb-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div className="bg-navy text-white rounded-card p-7 mb-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <p className="text-2xl md:text-3xl font-bold">{property.priceLabel}</p>
             <p className="text-sm text-white/80">{property.layout} / {property.areaLabel}</p>
           </div>
 
-          <dl className="grid sm:grid-cols-2 gap-4 mb-12 bg-greige-light rounded-sm p-6">
+          <dl className="grid sm:grid-cols-2 gap-4 mb-12 bg-greige-light rounded-card p-7">
             <InfoRow icon={TrainFront} label="交通アクセス" value={property.access} />
             <InfoRow icon={Home} label="間取り" value={property.layout} />
             {property.landArea && <InfoRow icon={Building2} label="土地面積" value={property.landArea} />}
@@ -79,7 +79,7 @@ export default function PropertyDetailPage({ params }: { params: { slug: string 
 
           <div className="space-y-10">
             <section>
-              <h2 className="text-lg font-bold text-charcoal-dark mb-3 border-l-4 border-navy pl-3">設備</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-charcoal-dark mb-4 border-l-4 border-navy pl-4">設備</h2>
               <ul className="flex flex-wrap gap-2">
                 {property.facilities.map((facility) => (
                   <li key={facility} className="text-xs md:text-sm bg-white border border-black/10 rounded-full px-3.5 py-1.5 text-charcoal-dark">
@@ -90,10 +90,10 @@ export default function PropertyDetailPage({ params }: { params: { slug: string 
             </section>
 
             <section>
-              <h2 className="text-lg font-bold text-charcoal-dark mb-3 border-l-4 border-navy pl-3">おすすめポイント</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-charcoal-dark mb-4 border-l-4 border-navy pl-4">おすすめポイント</h2>
               <ul className="space-y-2">
                 {property.points.map((point) => (
-                  <li key={point} className="text-sm md:text-base text-charcoal-dark bg-white border border-black/10 rounded-sm px-4 py-3">
+                  <li key={point} className="text-base text-charcoal-dark bg-white border border-black/10 rounded-card shadow-card px-5 py-4">
                     {point}
                   </li>
                 ))}
@@ -101,14 +101,14 @@ export default function PropertyDetailPage({ params }: { params: { slug: string 
             </section>
 
             <section>
-              <h2 className="text-lg font-bold text-charcoal-dark mb-3 border-l-4 border-navy pl-3">周辺環境</h2>
-              <p className="text-sm md:text-base text-charcoal-light leading-relaxed">{property.surroundings}</p>
+              <h2 className="text-xl md:text-2xl font-bold text-charcoal-dark mb-4 border-l-4 border-navy pl-4">周辺環境</h2>
+              <p className="text-base md:text-lg text-charcoal-light leading-loose">{property.surroundings}</p>
             </section>
 
             <section>
-              <h2 className="text-lg font-bold text-charcoal-dark mb-3 border-l-4 border-navy pl-3">地図</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-charcoal-dark mb-4 border-l-4 border-navy pl-4">地図</h2>
               {/* 実装時はここにGoogleマップ等の埋め込みiframeを設置してください */}
-              <div className="h-56 md:h-72 rounded-sm bg-greige-light border border-black/10 flex flex-col items-center justify-center gap-2 text-charcoal-light">
+              <div className="h-56 md:h-72 rounded-card bg-greige-light border border-black/10 flex flex-col items-center justify-center gap-2 text-charcoal-light">
                 <MapPin size={24} aria-hidden />
                 <p className="text-sm">地図表示エリア（{property.location}）</p>
               </div>
@@ -118,7 +118,7 @@ export default function PropertyDetailPage({ params }: { params: { slug: string 
           <div className="mt-12 text-center">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 min-h-[48px] px-8 rounded-sm bg-navy text-white font-semibold text-sm hover:bg-navy-light transition-colors"
+              className="inline-flex items-center gap-2 min-h-[52px] px-8 rounded-btn bg-navy text-white font-semibold text-base hover:bg-navy-light hover:-translate-y-0.5 transition-all"
             >
               この物件について問い合わせる
               <ArrowRight size={16} aria-hidden />

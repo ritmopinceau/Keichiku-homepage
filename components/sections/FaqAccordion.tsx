@@ -29,14 +29,14 @@ export default function FaqAccordion({ items }: FaqAccordionProps) {
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() => setOpenId(isOpen ? null : item.id)}
-                className="w-full flex items-center justify-between gap-4 py-5 text-left min-h-[48px]"
+                className="w-full flex items-center justify-between gap-4 py-6 text-left min-h-[52px]"
               >
-                <span className="flex gap-3 text-sm md:text-base font-semibold text-charcoal-dark">
+                <span className="flex gap-3 text-base md:text-lg font-semibold text-charcoal-dark">
                   <span className="text-gold font-display italic">Q</span>
                   {item.question}
                 </span>
                 <ChevronDown
-                  size={18}
+                  size={20}
                   aria-hidden
                   className={`shrink-0 transition-transform ${isOpen ? "rotate-180" : ""}`}
                 />
@@ -47,9 +47,9 @@ export default function FaqAccordion({ items }: FaqAccordionProps) {
               role="region"
               aria-labelledby={buttonId}
               hidden={!isOpen}
-              className="pb-5 pl-6"
+              className="pb-6 pl-7"
             >
-              <p className="flex gap-3 text-sm text-charcoal-light leading-relaxed">
+              <p className="flex gap-3 text-base text-charcoal-light leading-loose">
                 <span className="text-navy font-display italic">A</span>
                 {item.answer}
               </p>

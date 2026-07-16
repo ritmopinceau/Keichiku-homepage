@@ -41,15 +41,15 @@ export default function CompanyPage() {
       />
 
       {/* 代表メッセージ */}
-      <section className="py-14 md:py-20">
+      <section className="py-24 md:py-32 lg:py-40">
         <div className="container-content max-w-4xl">
           <Reveal>
             <SectionTitle en="Message" ja="代表メッセージ" align="left" />
             <div className="grid md:grid-cols-[220px_1fr] gap-6 md:gap-10 items-start">
-              <div className="relative h-56 md:h-64 w-full rounded-sm overflow-hidden">
+              <div className="relative h-56 md:h-64 w-full rounded-card overflow-hidden">
                 <Image src={companyImage} alt="代表者（写真は仮のものです）" fill sizes="220px" className="object-cover" />
               </div>
-              <div className="space-y-4 text-sm md:text-base leading-relaxed text-charcoal-light">
+              <div className="space-y-5 text-base md:text-lg leading-loose text-charcoal-light">
                 <p>
                   私たちは、建築と不動産という2つの専門分野を一社で担うことで、お客様が「どこに相談すればよいか分からない」という状況をなくしたいという想いで事業を行っています。
                 </p>
@@ -64,11 +64,11 @@ export default function CompanyPage() {
       </section>
 
       {/* 会社の理念 */}
-      <section className="py-14 md:py-20 bg-greige-light">
+      <section className="py-24 md:py-32 lg:py-40 bg-greige-light">
         <div className="container-content max-w-3xl text-center">
           <Reveal>
             <SectionTitle en="Philosophy" ja="会社の理念" />
-            <div className="relative h-52 md:h-64 w-full rounded-sm overflow-hidden mb-8">
+            <div className="relative h-52 md:h-64 w-full rounded-card overflow-hidden mb-8">
               <Image
                 src={companyPhilosophyImage}
                 alt="当社が手がける建築のイメージ"
@@ -86,15 +86,15 @@ export default function CompanyPage() {
       </section>
 
       {/* 会社概要 */}
-      <section className="py-14 md:py-20">
+      <section className="py-24 md:py-32 lg:py-40">
         <div className="container-content max-w-3xl">
           <Reveal>
             <SectionTitle en="Company Profile" ja="会社概要" align="left" />
             <dl className="divide-y divide-black/10 border-t border-b border-black/10">
               {overviewRows.map((row) => (
                 <div key={row.label} className="grid grid-cols-3 gap-4 py-4">
-                  <dt className="text-sm font-semibold text-charcoal-dark col-span-1">{row.label}</dt>
-                  <dd className="text-sm text-charcoal-light col-span-2">{row.value}</dd>
+                  <dt className="text-base font-semibold text-charcoal-dark col-span-1">{row.label}</dt>
+                  <dd className="text-base text-charcoal-light col-span-2">{row.value}</dd>
                 </div>
               ))}
             </dl>
@@ -103,13 +103,13 @@ export default function CompanyPage() {
       </section>
 
       {/* 事業内容 */}
-      <section className="py-14 md:py-20 bg-greige-light">
+      <section className="py-24 md:py-32 lg:py-40 bg-greige-light">
         <div className="container-content max-w-3xl">
           <Reveal>
             <SectionTitle en="Business" ja="事業内容" align="left" />
             <ul className="space-y-3">
               {siteConfig.company.businessDetail.map((item) => (
-                <li key={item} className="bg-white border border-black/10 rounded-sm px-4 py-3.5 text-sm text-charcoal-dark">
+                <li key={item} className="bg-white border border-black/10 rounded-card shadow-card px-5 py-4 text-base text-charcoal-dark">
                   {item}
                 </li>
               ))}
@@ -119,13 +119,13 @@ export default function CompanyPage() {
       </section>
 
       {/* 保有資格 */}
-      <section className="py-14 md:py-20">
+      <section className="py-24 md:py-32 lg:py-40">
         <div className="container-content max-w-3xl">
           <Reveal>
             <SectionTitle en="Qualifications" ja="保有資格" align="left" />
             <ul className="grid sm:grid-cols-2 gap-3">
               {siteConfig.company.qualifications.map((q) => (
-                <li key={q} className="bg-white border border-black/10 rounded-sm px-4 py-3.5 text-sm text-charcoal-dark">
+                <li key={q} className="bg-white border border-black/10 rounded-card shadow-card px-5 py-4 text-base text-charcoal-dark">
                   {q}
                 </li>
               ))}
@@ -135,16 +135,16 @@ export default function CompanyPage() {
       </section>
 
       {/* アクセス */}
-      <section className="py-14 md:py-20 bg-greige-light">
+      <section className="py-24 md:py-32 lg:py-40 bg-greige-light">
         <div className="container-content max-w-3xl">
           <Reveal>
             <SectionTitle en="Access" ja="アクセス" align="left" />
-            <p className="text-sm md:text-base text-charcoal-light leading-relaxed mb-4">
+            <p className="text-base md:text-lg text-charcoal-light leading-loose mb-6">
               {siteConfig.company.fullAddress}
               <br />
               最寄り駅からのアクセス方法は、確定後にこちらへ記載してください（例：〇〇線「〇〇」駅よりバス10分）。
             </p>
-            <div className="h-56 md:h-72 rounded-sm bg-white border border-black/10 flex items-center justify-center text-charcoal-light text-sm">
+            <div className="h-56 md:h-72 rounded-card bg-white border border-black/10 flex items-center justify-center text-charcoal-light text-base">
               地図表示エリア（Googleマップ等を埋め込んでください）
             </div>
           </Reveal>

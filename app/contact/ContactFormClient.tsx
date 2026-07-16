@@ -82,14 +82,14 @@ export default function ContactFormClient() {
       <div className="text-center py-10">
         <CheckCircle2 size={48} className="text-navy mx-auto mb-4" aria-hidden />
         <h2 className="text-xl md:text-2xl font-bold text-charcoal-dark mb-3">お問い合わせを受け付けました</h2>
-        <p className="text-sm md:text-base text-charcoal-light leading-relaxed mb-8">
+        <p className="text-base md:text-lg text-charcoal-light leading-loose mb-8">
           お問い合わせいただき、誠にありがとうございます。
           <br />
           内容を確認のうえ、担当者より折り返しご連絡いたします。
         </p>
         <Link
           href="/"
-          className="inline-flex items-center min-h-[48px] px-8 rounded-sm bg-navy text-white font-semibold text-sm hover:bg-navy-light transition-colors"
+          className="inline-flex items-center min-h-[52px] px-8 rounded-btn bg-navy text-white font-semibold text-base hover:bg-navy-light hover:-translate-y-0.5 transition-all"
         >
           トップページに戻る
         </Link>
@@ -114,7 +114,7 @@ export default function ContactFormClient() {
           <button
             type="button"
             onClick={() => setStep("form")}
-            className="min-h-[48px] flex-1 rounded-sm border border-navy text-navy font-semibold text-sm hover:bg-navy/5 transition-colors"
+            className="min-h-[52px] flex-1 rounded-btn border border-navy text-navy font-semibold text-base hover:bg-navy/5 transition-colors"
           >
             内容を修正する
           </button>
@@ -122,7 +122,7 @@ export default function ContactFormClient() {
             type="button"
             onClick={handleSubmit}
             disabled={isSubmitting}
-            className="min-h-[48px] flex-1 rounded-sm bg-navy text-white font-semibold text-sm hover:bg-navy-light transition-colors disabled:opacity-60"
+            className="min-h-[52px] flex-1 rounded-btn bg-navy text-white font-semibold text-base hover:bg-navy-light hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:hover:translate-y-0"
           >
             {isSubmitting ? "送信中..." : "この内容で送信する"}
           </button>
@@ -254,7 +254,7 @@ export default function ContactFormClient() {
 
       <button
         type="submit"
-        className="mt-8 w-full sm:w-auto min-h-[48px] px-10 rounded-sm bg-navy text-white font-semibold text-sm hover:bg-navy-light transition-colors"
+        className="mt-10 w-full sm:w-auto min-h-[52px] px-10 rounded-btn bg-navy text-white font-semibold text-base hover:bg-navy-light hover:-translate-y-0.5 transition-all"
       >
         入力内容を確認する
       </button>
@@ -263,7 +263,7 @@ export default function ContactFormClient() {
 }
 
 function inputClass(hasError: boolean) {
-  return `w-full min-h-[48px] rounded-sm border px-3.5 py-2.5 text-sm text-charcoal-dark bg-white focus:outline-none focus:ring-2 focus:ring-navy/40 ${
+  return `w-full min-h-[52px] rounded-btn border px-4 py-2.5 text-base text-charcoal-dark bg-white focus:outline-none focus:ring-2 focus:ring-navy/40 ${
     hasError ? "border-red-500" : "border-black/15"
   }`;
 }

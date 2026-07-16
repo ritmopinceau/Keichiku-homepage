@@ -29,9 +29,9 @@ export default function BusinessEntryCard({
   return (
     <Link
       href={href}
-      className="group relative flex flex-col overflow-hidden rounded-sm bg-white border border-black/5 shadow-sm hover:shadow-xl transition-shadow"
+      className="group relative flex flex-col overflow-hidden rounded-card bg-white border border-black/5 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
     >
-      <div className="relative h-56 md:h-64 w-full overflow-hidden">
+      <div className="relative h-60 md:h-72 w-full overflow-hidden">
         <Image
           src={image}
           alt={imageAlt}
@@ -39,22 +39,22 @@ export default function BusinessEntryCard({
           sizes="(min-width: 1024px) 33vw, 100vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-charcoal-dark/20" />
+        <div className="absolute inset-0 bg-charcoal-dark/15" />
       </div>
-      <div className="flex flex-col flex-1 p-6 md:p-7">
-        <span className="font-display italic text-gold text-sm mb-1">{englishLabel}</span>
-        <h3 className="text-xl md:text-2xl font-bold text-charcoal-dark mb-3">{headline}</h3>
-        <p className="text-sm text-charcoal-light leading-relaxed mb-4">{description}</p>
-        <ul className="flex flex-wrap gap-2 mb-6">
+      <div className="flex flex-col flex-1 p-8 md:p-9">
+        <span className="font-display italic text-gold text-base mb-2">{englishLabel}</span>
+        <h3 className="text-2xl font-bold text-charcoal-dark mb-4 leading-snug">{headline}</h3>
+        <p className="text-base text-charcoal-light leading-loose mb-6">{description}</p>
+        <ul className="flex flex-wrap gap-2 mb-8">
           {items.map((item) => (
-            <li key={item} className="text-xs bg-greige-light text-charcoal-dark px-3 py-1 rounded-full">
+            <li key={item} className="text-sm bg-greige-light text-charcoal-dark px-4 py-1.5 rounded-full">
               {item}
             </li>
           ))}
         </ul>
-        <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-navy group-hover:gap-3 transition-all">
+        <span className="mt-auto inline-flex items-center gap-2 text-base font-semibold text-navy group-hover:gap-3 transition-all">
           {buttonLabel}
-          <ArrowRight size={16} aria-hidden />
+          <ArrowRight size={18} aria-hidden />
         </span>
       </div>
     </Link>

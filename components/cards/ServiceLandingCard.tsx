@@ -16,11 +16,11 @@ interface ServiceLandingCardProps {
 export default function ServiceLandingCard({ service, href, reverse = false }: ServiceLandingCardProps) {
   return (
     <div
-      className={`grid md:grid-cols-2 gap-6 md:gap-10 items-center bg-white border border-black/5 rounded-sm overflow-hidden ${
+      className={`grid md:grid-cols-2 gap-8 md:gap-12 items-center bg-white border border-black/5 rounded-card shadow-card overflow-hidden ${
         reverse ? "md:[&>div:first-child]:order-2" : ""
       }`}
     >
-      <div className="relative h-56 md:h-full md:min-h-[320px] w-full">
+      <div className="relative h-64 md:h-full md:min-h-[380px] w-full">
         <Image
           src={service.heroImage}
           alt={service.heroImageAlt}
@@ -29,24 +29,24 @@ export default function ServiceLandingCard({ service, href, reverse = false }: S
           className="object-cover"
         />
       </div>
-      <div className="p-6 md:p-8">
-        <span className="font-display italic text-gold text-sm">{service.englishLabel}</span>
-        <h3 className="text-xl md:text-2xl font-bold text-charcoal-dark mt-1 mb-3">{service.title}</h3>
-        <p className="text-sm md:text-base text-charcoal-light leading-relaxed mb-5">{service.cardDescription}</p>
-        <ul className="grid grid-cols-2 gap-x-4 gap-y-2 mb-6">
+      <div className="p-8 md:p-10">
+        <span className="font-display italic text-gold text-base">{service.englishLabel}</span>
+        <h3 className="text-2xl md:text-3xl font-bold text-charcoal-dark mt-2 mb-4 leading-snug">{service.title}</h3>
+        <p className="text-base md:text-lg text-charcoal-light leading-loose mb-7">{service.cardDescription}</p>
+        <ul className="grid grid-cols-2 gap-x-4 gap-y-3 mb-8">
           {service.workScopeItems.slice(0, 6).map((item) => (
-            <li key={item} className="flex items-center gap-1.5 text-xs md:text-sm text-charcoal-dark">
-              <CheckCircle2 size={14} className="text-gold shrink-0" aria-hidden />
+            <li key={item} className="flex items-center gap-2 text-sm md:text-base text-charcoal-dark">
+              <CheckCircle2 size={16} className="text-gold shrink-0" aria-hidden />
               {item}
             </li>
           ))}
         </ul>
         <Link
           href={href}
-          className="inline-flex items-center gap-2 min-h-[44px] px-6 rounded-sm bg-navy text-white text-sm font-semibold hover:bg-navy-light transition-colors"
+          className="inline-flex items-center gap-2 min-h-[48px] px-7 rounded-btn bg-navy text-white text-base font-semibold shadow-card hover:shadow-card-hover hover:-translate-y-0.5 hover:bg-navy-light transition-all"
         >
           詳しく見る
-          <ArrowRight size={16} aria-hidden />
+          <ArrowRight size={18} aria-hidden />
         </Link>
       </div>
     </div>

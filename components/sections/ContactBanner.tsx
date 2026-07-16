@@ -17,7 +17,7 @@ export default function ContactBanner({
   description = "住宅リフォーム、新築、法人向け工事、不動産の売買・賃貸・買取・管理まで、ご相談内容に合わせて対応いたします。",
 }: ContactBannerProps) {
   return (
-    <section className="relative bg-charcoal-dark py-16 md:py-20 overflow-hidden">
+    <section className="relative bg-charcoal-dark py-24 md:py-32 overflow-hidden">
       <Image
         src={contactBannerImage}
         alt=""
@@ -26,19 +26,19 @@ export default function ContactBanner({
         className="object-cover opacity-25"
       />
       <div className="relative container-content text-center flex flex-col items-center">
-        <h2 className="text-white text-2xl md:text-3xl font-bold max-w-2xl leading-snug">{title}</h2>
-        <p className="text-white/80 text-sm md:text-base mt-4 max-w-xl leading-relaxed">{description}</p>
-        <div className="mt-8 flex flex-wrap justify-center gap-3 md:gap-4">
+        <h2 className="text-white text-3xl md:text-4xl font-bold max-w-2xl leading-snug text-balance">{title}</h2>
+        <p className="text-white/80 text-base md:text-lg mt-6 max-w-xl leading-loose">{description}</p>
+        <div className="mt-10 flex flex-wrap justify-center gap-3 md:gap-4">
           <Link
             href="/contact"
-            className="min-h-[48px] flex items-center gap-2 px-7 rounded-sm bg-white text-charcoal-dark font-semibold text-sm md:text-base hover:bg-greige transition-colors"
+            className="min-h-[52px] flex items-center gap-2 px-8 rounded-btn bg-white text-charcoal-dark font-semibold text-sm md:text-base shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all"
           >
             <Mail size={18} aria-hidden />
             お問い合わせフォーム
           </Link>
           <a
             href={siteConfig.company.phoneHref}
-            className="min-h-[48px] flex items-center gap-2 px-7 rounded-sm border border-white/40 text-white font-semibold text-sm md:text-base hover:bg-white/10 transition-colors"
+            className="min-h-[52px] flex items-center gap-2 px-8 rounded-btn border border-white/40 text-white font-semibold text-sm md:text-base hover:bg-white/10 hover:-translate-y-0.5 transition-all"
           >
             <Phone size={18} aria-hidden />
             電話で相談する（{siteConfig.company.phoneDisplay}）

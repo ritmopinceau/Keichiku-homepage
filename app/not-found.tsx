@@ -17,14 +17,14 @@ export default function NotFound() {
       <div className="flex flex-wrap justify-center gap-3 mb-14">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 min-h-[48px] px-7 rounded-sm bg-navy text-white font-semibold text-sm hover:bg-navy-light transition-colors"
+          className="inline-flex items-center gap-2 min-h-[52px] px-8 rounded-btn bg-navy text-white font-semibold text-base hover:bg-navy-light hover:-translate-y-0.5 transition-all"
         >
           <Home size={16} aria-hidden />
           トップページへ戻る
         </Link>
         <Link
           href="/contact"
-          className="inline-flex items-center gap-2 min-h-[48px] px-7 rounded-sm border border-navy text-navy font-semibold text-sm hover:bg-navy/5 transition-colors"
+          className="inline-flex items-center gap-2 min-h-[52px] px-8 rounded-btn border border-navy text-navy font-semibold text-base hover:bg-navy/5 hover:-translate-y-0.5 transition-all"
         >
           <Phone size={16} aria-hidden />
           お問い合わせ

@@ -23,7 +23,7 @@ export default function ProjectsPage() {
         breadcrumbs={[{ label: "施工事例" }]}
       />
 
-      <section className="py-16 md:py-24">
+      <section className="py-24 md:py-32 lg:py-40">
         <div className="container-content">
           <ProjectsListClient />
         </div>

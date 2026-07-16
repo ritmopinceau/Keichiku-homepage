@@ -27,9 +27,9 @@ export default function ServiceCard({
   return (
     <Link
       href={href}
-      className="group flex flex-col h-full overflow-hidden rounded-sm bg-white border border-black/5 hover:shadow-lg transition-shadow"
+      className="group flex flex-col h-full overflow-hidden rounded-card bg-white border border-black/5 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
     >
-      <div className="relative h-44 md:h-48 w-full overflow-hidden">
+      <div className="relative h-48 md:h-52 w-full overflow-hidden">
         <Image
           src={image}
           alt={imageAlt}
@@ -38,18 +38,18 @@ export default function ServiceCard({
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         {categoryLabel && (
-          <span className="absolute top-3 left-3 bg-white/90 text-charcoal-dark text-[11px] font-semibold px-2.5 py-1 rounded-sm">
+          <span className="absolute top-4 left-4 bg-white/90 text-charcoal-dark text-xs font-semibold px-3 py-1.5 rounded-full">
             {categoryLabel}
           </span>
         )}
       </div>
-      <div className="flex flex-col flex-1 p-5">
-        {englishLabel && <span className="font-display italic text-gold text-xs mb-1">{englishLabel}</span>}
-        <h3 className="text-base md:text-lg font-bold text-charcoal-dark mb-2">{title}</h3>
-        <p className="text-sm text-charcoal-light leading-relaxed line-clamp-3 mb-4">{description}</p>
-        <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-navy group-hover:gap-2.5 transition-all">
+      <div className="flex flex-col flex-1 p-7">
+        {englishLabel && <span className="font-display italic text-gold text-sm mb-1.5">{englishLabel}</span>}
+        <h3 className="text-lg font-bold text-charcoal-dark mb-3">{title}</h3>
+        <p className="text-base text-charcoal-light leading-loose line-clamp-3 mb-6">{description}</p>
+        <span className="mt-auto inline-flex items-center gap-2 text-base font-semibold text-navy group-hover:gap-3 transition-all">
           詳しく見る
-          <ArrowRight size={14} aria-hidden />
+          <ArrowRight size={16} aria-hidden />
         </span>
       </div>
     </Link>

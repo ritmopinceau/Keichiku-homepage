@@ -29,6 +29,19 @@ const config: Config = {
           light: "#f4f1eb",
           dark: "#d8cfc0",
         },
+        warmgray: {
+          DEFAULT: "#8f8880",
+          light: "#a8a29a",
+          dark: "#6b655e",
+        },
+      },
+      borderRadius: {
+        card: "20px",
+        btn: "10px",
+      },
+      boxShadow: {
+        card: "0 6px 28px rgba(26, 26, 26, 0.07)",
+        "card-hover": "0 18px 44px rgba(26, 26, 26, 0.13)",
       },
       fontFamily: {
         sans: [
@@ -54,7 +67,7 @@ const config: Config = {
         },
       },
       animation: {
-        fadeInUp: "fadeInUp 0.7s ease-out both",
+        fadeInUp: "fadeInUp 0.6s ease-out both",
       },
     },
   },

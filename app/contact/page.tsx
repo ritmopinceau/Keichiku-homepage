@@ -24,11 +24,11 @@ export default function ContactPage() {
         breadcrumbs={[{ label: "お問い合わせ" }]}
       />
 
-      <section className="py-14 md:py-20">
+      <section className="py-24 md:py-32 lg:py-40">
         <div className="container-content max-w-2xl">
           <a
             href={siteConfig.company.phoneHref}
-            className="flex items-center justify-center gap-3 min-h-[56px] rounded-sm border border-navy text-navy font-semibold mb-10 hover:bg-navy/5 transition-colors"
+            className="flex items-center justify-center gap-3 min-h-[56px] rounded-btn border border-navy text-navy font-semibold text-base mb-12 hover:bg-navy/5 hover:-translate-y-0.5 transition-all"
           >
             <Phone size={20} aria-hidden />
             お急ぎの方はお電話でも承ります：{siteConfig.company.phoneDisplay}（{siteConfig.company.businessHours}）

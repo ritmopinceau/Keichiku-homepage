@@ -23,7 +23,7 @@ export default function PropertiesPage() {
         breadcrumbs={[{ label: "物件情報" }]}
       />
 
-      <section className="py-16 md:py-24">
+      <section className="py-24 md:py-32 lg:py-40">
         <div className="container-content">
           <PropertiesListClient />
         </div>

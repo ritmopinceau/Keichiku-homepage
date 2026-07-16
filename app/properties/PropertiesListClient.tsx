@@ -71,7 +71,7 @@ export default function PropertiesListClient() {
           role="tab"
           aria-selected={dealType === "sale"}
           onClick={() => handleDealTypeChange("sale")}
-          className={`min-h-[48px] flex-1 sm:flex-none sm:px-10 rounded-sm font-semibold text-sm transition-colors ${
+          className={`min-h-[52px] flex-1 sm:flex-none sm:px-10 rounded-btn font-semibold text-base transition-all ${
             dealType === "sale" ? "bg-navy text-white" : "bg-white text-charcoal-dark border border-black/10"
           }`}
         >
@@ -82,7 +82,7 @@ export default function PropertiesListClient() {
           role="tab"
           aria-selected={dealType === "rent"}
           onClick={() => handleDealTypeChange("rent")}
-          className={`min-h-[48px] flex-1 sm:flex-none sm:px-10 rounded-sm font-semibold text-sm transition-colors ${
+          className={`min-h-[52px] flex-1 sm:flex-none sm:px-10 rounded-btn font-semibold text-base transition-all ${
             dealType === "rent" ? "bg-navy text-white" : "bg-white text-charcoal-dark border border-black/10"
           }`}
         >
@@ -90,7 +90,7 @@ export default function PropertiesListClient() {
         </button>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10 bg-greige-light p-5 rounded-sm">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12 bg-greige-light p-7 rounded-card">
         <FilterSelect label="物件種別" value={propertyType} onChange={setPropertyType} options={propertyTypeOptions} />
         <FilterSelect label="エリア" value={location} onChange={setLocation} options={locationOptions} />
         <FilterSelect
@@ -138,7 +138,7 @@ function FilterSelect({
         id={id}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full min-h-[44px] rounded-sm border border-black/15 bg-white px-3 text-sm text-charcoal-dark"
+        className="w-full min-h-[48px] rounded-btn border border-black/15 bg-white px-3 text-base text-charcoal-dark"
       >
         {options.map((option) => (
           <option key={option} value={option}>

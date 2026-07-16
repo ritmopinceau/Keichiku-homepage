@@ -61,7 +61,7 @@ export default function Header() {
               </Link>
 
               {item.children && openMenu === item.label && (
-                <div className="absolute top-full left-0 min-w-[200px] bg-white border border-black/5 shadow-lg rounded-sm py-2 animate-fadeInUp">
+                <div className="absolute top-full left-0 min-w-[200px] bg-white border border-black/5 shadow-card-hover rounded-btn py-2 animate-fadeInUp">
                   {item.children.map((child) => (
                     <Link
                       key={child.href}
@@ -84,7 +84,7 @@ export default function Header() {
           </a>
           <Link
             href="/contact"
-            className="bg-navy text-white text-sm font-semibold px-5 py-2.5 rounded-sm hover:bg-navy-light transition-colors"
+            className="bg-navy text-white text-sm font-semibold px-6 py-2.5 rounded-btn hover:bg-navy-light hover:-translate-y-0.5 transition-all"
           >
             お問い合わせ
           </Link>
@@ -117,14 +117,14 @@ export default function Header() {
             <div className="py-4">
               <a
                 href={siteConfig.company.phoneHref}
-                className="flex items-center justify-center gap-2 border border-navy text-navy font-semibold py-3 rounded-sm mb-3 min-h-[48px]"
+                className="flex items-center justify-center gap-2 border border-navy text-navy font-semibold py-3 rounded-btn mb-3 min-h-[48px]"
               >
                 <Phone size={18} aria-hidden />
                 電話で相談する（{siteConfig.company.phoneDisplay}）
               </a>
               <Link
                 href="/contact"
-                className="flex items-center justify-center bg-navy text-white font-semibold py-3 rounded-sm min-h-[48px]"
+                className="flex items-center justify-center bg-navy text-white font-semibold py-3 rounded-btn min-h-[48px]"
               >
                 お問い合わせフォーム
               </Link>

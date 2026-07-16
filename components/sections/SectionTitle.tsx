@@ -12,23 +12,27 @@ interface SectionTitleProps {
 export default function SectionTitle({ en, ja, description, align = "center", light = false }: SectionTitleProps) {
   const alignClass = align === "center" ? "text-center items-center" : "text-left items-start";
   return (
-    <div className={`flex flex-col ${alignClass} mb-10 md:mb-14`}>
+    <div className={`flex flex-col ${alignClass} mb-14 md:mb-20`}>
       <span
-        className={`font-display italic tracking-wide text-sm md:text-base mb-2 ${
+        className={`font-display italic tracking-wide text-base md:text-lg mb-3 ${
           light ? "text-gold-light" : "text-gold"
         }`}
       >
         {en}
       </span>
       <h2
-        className={`text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight ${
+        className={`text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight text-balance ${
           light ? "text-white" : "text-charcoal-dark"
         }`}
       >
         {ja}
       </h2>
       {description && (
-        <p className={`mt-4 max-w-2xl text-sm md:text-base leading-relaxed ${light ? "text-white/80" : "text-charcoal-light"}`}>
+        <p
+          className={`mt-5 max-w-2xl text-base md:text-lg leading-loose ${
+            light ? "text-white/80" : "text-charcoal-light"
+          }`}
+        >
           {description}
         </p>
       )}

@@ -33,7 +33,7 @@ export default function HomePage() {
       <HeroSection />
 
       {/* 3つの事業への入口 */}
-      <section className="py-16 md:py-24">
+      <section className="py-24 md:py-32 lg:py-40">
         <div className="container-content">
           <Reveal>
             <SectionTitle
@@ -62,7 +62,7 @@ export default function HomePage() {
       </section>
 
       {/* 私たちの強み */}
-      <section className="py-16 md:py-24 bg-greige-light">
+      <section className="py-24 md:py-32 lg:py-40 bg-greige-light">
         <div className="container-content">
           <Reveal>
             <SectionTitle en="Our Strength" ja="私たちの強み" />
@@ -78,7 +78,7 @@ export default function HomePage() {
       </section>
 
       {/* サービス紹介 */}
-      <section className="py-16 md:py-24">
+      <section className="py-24 md:py-32 lg:py-40">
         <div className="container-content">
           <Reveal>
             <SectionTitle en="Services" ja="サービス紹介" />
@@ -143,7 +143,7 @@ export default function HomePage() {
       </section>
 
       {/* 施工事例(スマートフォンではスクロールを短くするため非表示、md以上で表示) */}
-      <section className="hidden md:block py-16 md:py-24 bg-greige-light">
+      <section className="hidden md:block py-24 md:py-32 lg:py-40 bg-greige-light">
         <div className="container-content">
           <Reveal>
             <SectionTitle en="Works" ja="施工事例" description="これまでの施工事例の一部をご紹介します。" />
@@ -158,7 +158,7 @@ export default function HomePage() {
           <div className="text-center">
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 min-h-[48px] px-8 rounded-sm border border-navy text-navy font-semibold text-sm hover:bg-navy hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 min-h-[52px] px-8 rounded-btn border border-navy text-navy font-semibold text-base hover:bg-navy hover:text-white hover:-translate-y-0.5 transition-all"
             >
               施工事例をすべて見る
               <ArrowRight size={16} aria-hidden />
@@ -168,7 +168,7 @@ export default function HomePage() {
       </section>
 
       {/* 不動産物件情報(スマートフォンではスクロールを短くするため非表示、md以上で表示) */}
-      <section className="hidden md:block py-16 md:py-24">
+      <section className="hidden md:block py-24 md:py-32 lg:py-40">
         <div className="container-content">
           <Reveal>
             <SectionTitle en="Properties" ja="不動産物件情報" description="売買・賃貸の新着物件情報をご紹介します。" />
@@ -183,7 +183,7 @@ export default function HomePage() {
           <div className="text-center">
             <Link
               href="/properties"
-              className="inline-flex items-center gap-2 min-h-[48px] px-8 rounded-sm border border-navy text-navy font-semibold text-sm hover:bg-navy hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 min-h-[52px] px-8 rounded-btn border border-navy text-navy font-semibold text-base hover:bg-navy hover:text-white hover:-translate-y-0.5 transition-all"
             >
               物件情報をすべて見る
               <ArrowRight size={16} aria-hidden />
@@ -193,7 +193,7 @@ export default function HomePage() {
       </section>
 
       {/* ご相談から完了までの流れ */}
-      <section className="py-16 md:py-24 bg-greige-light">
+      <section className="py-24 md:py-32 lg:py-40 bg-greige-light">
         <div className="container-content">
           <Reveal>
             <SectionTitle en="Flow" ja="ご相談から完了までの流れ" />
@@ -206,7 +206,7 @@ export default function HomePage() {
       </section>
 
       {/* お知らせ */}
-      <section className="py-16 md:py-24">
+      <section className="py-24 md:py-32 lg:py-40">
         <div className="container-content max-w-3xl">
           <Reveal>
             <SectionTitle en="News" ja="お知らせ" align="left" />
@@ -214,12 +214,12 @@ export default function HomePage() {
           <ul className="divide-y divide-black/10 border-t border-b border-black/10">
             {getSortedNews().slice(0, 3).map((news) => {
               const content = (
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 py-5">
-                  <span className="text-xs text-charcoal-light w-24 shrink-0">{news.date}</span>
-                  <span className="inline-flex w-fit text-[11px] font-semibold bg-greige-light text-charcoal-dark px-2.5 py-1 rounded-sm shrink-0">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 py-6">
+                  <span className="text-sm text-charcoal-light w-24 shrink-0">{news.date}</span>
+                  <span className="inline-flex w-fit text-xs font-semibold bg-greige-light text-charcoal-dark px-3 py-1 rounded-full shrink-0">
                     {news.category}
                   </span>
-                  <span className="text-sm text-charcoal-dark">{news.title}</span>
+                  <span className="text-base text-charcoal-dark">{news.title}</span>
                 </div>
               );
               return (

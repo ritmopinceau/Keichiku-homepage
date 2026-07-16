@@ -16,16 +16,16 @@ export default function StrengthCard({ title, description, icon, image }: Streng
   const IconComponent = (Icons as unknown as Record<string, LucideIcon>)[icon] ?? Icons.Building2;
 
   return (
-    <div className="flex flex-col rounded-sm bg-white border border-black/5 overflow-hidden h-full">
-      <div className="relative h-36 w-full">
+    <div className="flex flex-col rounded-card bg-white border border-black/5 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 overflow-hidden h-full">
+      <div className="relative h-40 w-full">
         <Image src={image} alt="" fill sizes="(min-width: 768px) 25vw, 100vw" className="object-cover" />
       </div>
-      <div className="p-5 flex flex-col flex-1">
-        <div className="w-11 h-11 rounded-full bg-navy/10 text-navy flex items-center justify-center mb-4 -mt-9 border-4 border-white bg-white">
-          <IconComponent size={20} aria-hidden />
+      <div className="p-7 flex flex-col flex-1">
+        <div className="w-12 h-12 rounded-full bg-white text-navy flex items-center justify-center mb-5 -mt-10 border-4 border-white shadow-card">
+          <IconComponent size={22} aria-hidden />
         </div>
-        <h3 className="text-base font-bold text-charcoal-dark mb-2">{title}</h3>
-        <p className="text-sm text-charcoal-light leading-relaxed">{description}</p>
+        <h3 className="text-lg font-bold text-charcoal-dark mb-3">{title}</h3>
+        <p className="text-base text-charcoal-light leading-loose">{description}</p>
       </div>
     </div>
   );

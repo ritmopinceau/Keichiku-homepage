@@ -27,8 +27,8 @@ export default function RealEstatePage() {
         breadcrumbs={[{ label: "不動産" }]}
       />
 
-      <section className="py-16 md:py-24">
-        <div className="container-content space-y-8 md:space-y-10">
+      <section className="py-24 md:py-32 lg:py-40">
+        <div className="container-content space-y-12 md:space-y-16">
           {realestateServices.map((service, index) => (
             <Reveal key={service.slug} delayMs={index * 80}>
               <ServiceLandingCard

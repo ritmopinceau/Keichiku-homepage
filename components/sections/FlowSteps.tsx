@@ -11,21 +11,21 @@ interface FlowStepsProps {
 export default function FlowSteps({ steps, note }: FlowStepsProps) {
   return (
     <div>
-      <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map((step) => (
           <li
             key={step.step}
-            className="relative bg-white border border-black/5 rounded-sm p-5 pt-8"
+            className="relative bg-white border border-black/5 rounded-card shadow-card p-7 pt-10"
           >
-            <span className="absolute -top-4 left-5 w-9 h-9 rounded-full bg-navy text-white text-sm font-bold flex items-center justify-center">
+            <span className="absolute -top-5 left-7 w-10 h-10 rounded-full bg-navy text-white text-base font-bold flex items-center justify-center">
               {step.step}
             </span>
-            <h3 className="font-bold text-charcoal-dark mb-1.5">{step.title}</h3>
-            <p className="text-xs text-charcoal-light leading-relaxed">{step.description}</p>
+            <h3 className="font-bold text-charcoal-dark text-lg mb-2">{step.title}</h3>
+            <p className="text-sm text-charcoal-light leading-loose">{step.description}</p>
           </li>
         ))}
       </ol>
-      {note && <p className="mt-6 text-xs md:text-sm text-charcoal-light">※ {note}</p>}
+      {note && <p className="mt-8 text-sm text-charcoal-light leading-relaxed">※ {note}</p>}
     </div>
   );
 }

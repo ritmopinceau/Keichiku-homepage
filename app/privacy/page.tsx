@@ -51,9 +51,9 @@ export default function PrivacyPage() {
         breadcrumbs={[{ label: "プライバシーポリシー" }]}
       />
 
-      <section className="py-14 md:py-20">
+      <section className="py-24 md:py-32 lg:py-40">
         <div className="container-content max-w-3xl space-y-10">
-          <p className="text-sm md:text-base text-charcoal-light leading-relaxed">
+          <p className="text-base md:text-lg text-charcoal-light leading-loose">
             {siteConfig.company.name}（以下「当社」といいます）は、お客様の個人情報の重要性を認識し、
             個人情報の保護に関する法律を遵守するとともに、以下のプライバシーポリシーに基づき、
             適切な取り扱いおよび保護に努めます。
@@ -61,8 +61,8 @@ export default function PrivacyPage() {
 
           {sections.map((section) => (
             <div key={section.title}>
-              <h2 className="text-lg font-bold text-charcoal-dark mb-3">{section.title}</h2>
-              <p className="text-sm md:text-base text-charcoal-light leading-relaxed whitespace-pre-line">
+              <h2 className="text-xl md:text-2xl font-bold text-charcoal-dark mb-4">{section.title}</h2>
+              <p className="text-base md:text-lg text-charcoal-light leading-loose whitespace-pre-line">
                 {section.body}
               </p>
             </div>
