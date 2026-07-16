@@ -64,3 +64,23 @@ export const propertyImages = [
 
 export const companyImage = unsplash("photo-1541888946425-d81bb19240f5");
 export const contactBannerImage = unsplash("photo-1567767292278-a4f21aa2d36e");
+
+// 個人のお客様「住宅リフォーム」ページ専用の画像
+export const reformLifestyleImages = {
+  heroFamily: unsplash("photo-1476703993599-0035a21b17a9", 1920),
+  livingRoom: unsplash("photo-1560448204-603b3fc33ddc", 1600),
+};
+
+// 「お客様の声」欄で使用する仮の人物写真(実際のお客様の声・写真に差し替えてください)
+export const testimonialImages = [
+  unsplash("photo-1494790108377-be9c29b29330", 400),
+  unsplash("photo-1472099645785-5658abf4ff4e", 400),
+  unsplash("photo-1573497019940-1c28c88b4f3e", 400),
+];
+
+// 「担当者紹介」欄で使用する仮のスタッフ写真(実際のスタッフ写真に差し替えてください)
+export const staffPhotoImages = [
+  unsplash("photo-1519085360753-af0119f7cbe7", 400),
+  unsplash("photo-1500648767791-00dcc994a43e", 400),
+  unsplash("photo-1633332755192-727a05c4013d", 400),
+];

@@ -93,3 +93,124 @@ export const reformFaqItems: { id: string; question: string; answer: string }[] 
     answer: "工事内容に応じた保証を設けております。詳しい保証内容は事前にご説明いたします。",
   },
 ];
+
+// 当社が選ばれる理由(アイコン付きカード)
+export const reformChoiceReasons: { icon: string; title: string; description: string }[] = [
+  {
+    icon: "Building2",
+    title: "建築会社だから構造まで安心",
+    description: "内装だけでなく、構造や耐久性まで理解した建築のプロが対応します。",
+  },
+  {
+    icon: "Wrench",
+    title: "小さな修繕から全面改修まで対応",
+    description: "部分的な水まわり修理から全面リフォームまで、工事の規模を問わずご相談いただけます。",
+  },
+  {
+    icon: "Layers",
+    title: "建築・不動産をワンストップ対応",
+    description: "物件探しから設計・施工まで、窓口を一本化して対応できることが強みです。",
+  },
+  {
+    icon: "Search",
+    title: "現地調査・見積無料",
+    description: "現地調査、お見積りは無料です。内容にご納得いただくまで費用は発生しません。",
+  },
+  {
+    icon: "HeartHandshake",
+    title: "アフターサポートも充実",
+    description: "工事完了後も、定期点検やご相談を通じて長くお付き合いいたします。",
+  },
+];
+
+// 実績を数字で(仮データ。確定次第この数値を差し替えてください)
+export const reformAchievements: { value: string; label: string }[] = [
+  { value: "30年", label: "創業からの年数" },
+  { value: "850件+", label: "累計施工件数" },
+  { value: "120件", label: "年間施工件数" },
+  { value: "98%", label: "顧客満足度" },
+  { value: "65%", label: "リピート・紹介率" },
+  { value: "30年", label: "地域密着" },
+];
+
+// お客様の声(仮データ。実際のお客様の声・写真に差し替えてください)
+export const reformTestimonials: {
+  name: string;
+  rating: number;
+  workType: string;
+  comment: string;
+}[] = [
+  {
+    name: "田中様（30代女性）",
+    rating: 5,
+    workType: "キッチンリフォーム",
+    comment:
+      "対面キッチンにしたことで、料理をしながら家族と会話できるようになりました。担当の方が要望を丁寧に聞いてくださり、安心してお任せできました。",
+  },
+  {
+    name: "佐藤様（60代男性）",
+    rating: 5,
+    workType: "浴室リフォーム",
+    comment:
+      "寒かった浴室が暖かく快適になり、毎日の入浴が楽しみになりました。工事中の対応も丁寧で、近隣への配慮もしっかりされていました。",
+  },
+  {
+    name: "山本様（40代女性）",
+    rating: 4,
+    workType: "全面リフォーム",
+    comment:
+      "中古住宅を購入したタイミングで全面的にお願いしました。予算内でできることを一緒に考えてくださり、納得のいく仕上がりになりました。",
+  },
+];
+
+// 担当者紹介(仮データ。実際のスタッフ写真・紹介文に差し替えてください)
+export const reformStaffMembers: {
+  name: string;
+  role: string;
+  specialty: string;
+  comment: string;
+}[] = [
+  {
+    name: "山田 太郎（仮）",
+    role: "リフォームアドバイザー",
+    specialty: "水まわりリフォーム",
+    comment: "お客様の暮らし方に合わせたプランを、じっくりお話を伺いながらご提案します。",
+  },
+  {
+    name: "鈴木 一郎（仮）",
+    role: "設計担当",
+    specialty: "間取り変更・断熱改修",
+    comment: "構造や断熱性能まで考えた、長く安心して暮らせる住まいをご提案します。",
+  },
+  {
+    name: "高橋 健二（仮）",
+    role: "現場管理担当",
+    specialty: "施工管理・工程調整",
+    comment: "住みながらの工事も、生活への影響を最小限にする工程を組みます。",
+  },
+];
+
+// 補助金相談セクション(仮データ。制度内容・支給額は年度や自治体により異なるため、
+// 具体的な金額は記載せずお問い合わせ時にご案内する構成にしています)
+export const reformSubsidyItems: { icon: string; title: string; description: string }[] = [
+  {
+    icon: "Leaf",
+    title: "住宅省エネ補助金",
+    description: "断熱窓や高効率給湯器の設置など、省エネ性能を高める工事が対象になる場合があります。",
+  },
+  {
+    icon: "Thermometer",
+    title: "断熱補助金",
+    description: "窓・壁・床の断熱改修など、住まいの断熱性能を向上させる工事が対象になる場合があります。",
+  },
+  {
+    icon: "Baby",
+    title: "子育て支援補助金",
+    description: "子育て世帯・若者夫婦世帯を対象に、住宅の性能向上リフォームを支援する制度がある場合があります。",
+  },
+  {
+    icon: "FileText",
+    title: "その他各種補助金",
+    description: "国・自治体の制度は年度により変わります。対象となるかどうかも含めてご案内いたします。",
+  },
+];
