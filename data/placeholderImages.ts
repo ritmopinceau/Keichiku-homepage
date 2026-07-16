@@ -10,7 +10,7 @@ function unsplash(id: string, w = 1600, q = 80) {
 
 export const heroImages = {
   top: unsplash("photo-1600585154340-be6161a56a0c", 1920),
-  personal: unsplash("photo-1600210492486-714dcaa8fe15"),
+  personal: unsplash("photo-1600607687920-4e2a09cf159d"),
   corporate: unsplash("photo-1497366216548-37526070297c"),
   realestate: unsplash("photo-1524758631624-e2822e304c36"),
 };
@@ -47,7 +47,7 @@ export const companyPhilosophyImage = unsplash("photo-1493809842364-78817add7ffb
 export const projectImages = [
   unsplash("photo-1600607687939-ce8a6c25118c"),
   unsplash("photo-1600585154526-990dced4db0d"),
-  unsplash("photo-1618221195710-dd6b41faaea3"),
+  unsplash("photo-1600566752355-35792bedcfea"),
   unsplash("photo-1560518883-ce09059eeffa"),
   unsplash("photo-1560185127-6ed189bf02f4"),
   unsplash("photo-1582268611958-ebfd161ef9cf"),
@@ -56,11 +56,11 @@ export const projectImages = [
 export const propertyImages = [
   unsplash("photo-1600047509807-ba8f99d2cdde"),
   unsplash("photo-1523217582562-09d0def993a6"),
-  unsplash("photo-1523480717984-05a58e7e0a7a"),
+  unsplash("photo-1502005229762-cf1b2da7c5d6"),
   unsplash("photo-1497215728101-856f4ea42174"),
   unsplash("photo-1590490360182-c33d57733427"),
   unsplash("photo-1465101046530-73398c7f28ca"),
 ];
 
 export const companyImage = unsplash("photo-1541888946425-d81bb19240f5");
-export const contactBannerImage = unsplash("photo-1587582423116-ec07293f0da7");
+export const contactBannerImage = unsplash("photo-1567767292278-a4f21aa2d36e");
