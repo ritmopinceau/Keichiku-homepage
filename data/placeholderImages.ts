@@ -96,4 +96,10 @@ export const subServiceImages = {
   fullReform: unsplash("photo-1626885930974-4b69aa21bbf9"),
   usedHomeReform: unsplash("photo-1518780664697-55e3ad937233"),
   mansionReform: unsplash("photo-1502672260266-1c1ef2d93688"),
+  floorPlanChange: unsplash("photo-1567016432779-094069958ea5"),
+  equipment: unsplash("photo-1621905251189-08b45d6a269e"),
+  flooring: unsplash("photo-1581858726788-75bc0f6a952d"),
+  storage: unsplash("photo-1585128792020-803d29415281"),
+  japaneseRoom: unsplash("photo-1615529182904-14819c35db37"),
+  smallRepair: unsplash("photo-1517646287270-a5a9ca602e5c"),
 };

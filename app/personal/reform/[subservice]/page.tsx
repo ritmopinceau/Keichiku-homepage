@@ -29,7 +29,9 @@ export default function ReformSubServicePage({ params }: { params: { subservice:
   const relatedProjects = projects
     .filter((p) => p.categoryLabel === subService.relatedProjectCategory)
     .slice(0, 3);
-  const siblingSubServices = getSubServicesByParent("personal", "reform").filter((s) => s.slug !== subService.slug);
+  const siblingSubServices = getSubServicesByParent("personal", "reform")
+    .filter((s) => s.slug !== subService.slug)
+    .slice(0, 8);
 
   return (
     <SubServiceTemplate
