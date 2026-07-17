@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import * as Icons from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { ArrowRight, Mail, Phone, MessageCircle, Star } from "lucide-react";
+import { ArrowRight, Mail, Phone, MessageCircle, Star, Square } from "lucide-react";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import SectionTitle from "@/components/sections/SectionTitle";
 import Reveal from "@/components/sections/Reveal";
@@ -26,6 +26,7 @@ import {
   reformStaffMembers,
   reformSubsidyItems,
   reformMenuOrder,
+  reformConcernLinks,
 } from "@/data/reformPageContent";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -211,29 +212,76 @@ export default function PersonalReformPage() {
         </div>
       </section>
 
-      {/* 6. 対応工事メニュー */}
+      {/* 6. 対応工事メニュー(サービスハブ) */}
       <section className="py-24 md:py-32 lg:py-40">
         <div className="container-content">
           <Reveal>
-            <SectionTitle en="Menu" ja="対応工事メニュー" />
+            <SectionTitle
+              en="Menu"
+              ja="対応工事メニュー"
+              description="お住まいのお悩みや、ご希望の工事内容からお選びください。各サービスページでは施工事例・費用目安・工事の流れ・補助金・よくある質問をご紹介しています。まずはお気軽にご覧ください。"
+            />
           </Reveal>
-          <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-6">
-            {reformSubServices.map((sub, index) => {
-              const IconComponent = getIcon(sub.icon);
-              return (
-                <Reveal key={sub.slug} delayMs={index * 40}>
-                  <Link
-                    href={`/personal/reform/${sub.slug}`}
-                    className="flex flex-col items-center text-center gap-4 bg-white rounded-card shadow-card border border-black/5 p-8 h-full hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
-                  >
-                    <div className="w-14 h-14 rounded-full bg-gold/10 text-gold-dark flex items-center justify-center shrink-0">
-                      <IconComponent size={26} aria-hidden />
-                    </div>
-                    <p className="font-bold text-charcoal-dark">{sub.title}</p>
-                  </Link>
-                </Reveal>
-              );
-            })}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+            {reformSubServices.map((sub, index) => (
+              <Reveal key={sub.slug} delayMs={index * 30}>
+                <Link
+                  href={`/personal/reform/${sub.slug}`}
+                  className="group flex flex-col h-full overflow-hidden rounded-card bg-white border border-black/5 shadow-card hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300"
+                >
+                  <div className="relative h-32 md:h-36 w-full overflow-hidden">
+                    <Image
+                      src={sub.heroImage}
+                      alt={sub.heroImageAlt}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, 50vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="flex flex-col flex-1 p-5">
+                    <h3 className="font-bold text-charcoal-dark text-sm md:text-base mb-1.5 leading-snug">
+                      {sub.title}
+                    </h3>
+                    <p className="text-xs md:text-sm text-charcoal-light mb-4">{sub.cardDescription}</p>
+                    <span className="mt-auto inline-flex items-center gap-1.5 text-xs md:text-sm font-semibold text-navy group-hover:gap-2.5 transition-all">
+                      詳しく見る
+                      <ArrowRight size={14} aria-hidden />
+                    </span>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* お住まいのお悩みから探す */}
+      <section className="py-24 md:py-32 lg:py-40 bg-greige-light">
+        <div className="container-content">
+          <Reveal>
+            <SectionTitle
+              en="Find by Concern"
+              ja="お住まいのお悩みから探す"
+              description="工事名が分からなくても大丈夫です。あてはまるお悩みから、あわせてご覧いただけます。"
+            />
+          </Reveal>
+          <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+            {reformConcernLinks.map((concern, index) => (
+              <Reveal key={concern.slug} delayMs={index * 40}>
+                <Link
+                  href={`/personal/reform/${concern.slug}`}
+                  className="group flex items-center gap-3 bg-white border border-black/10 rounded-card shadow-card px-5 py-4 hover:shadow-card-hover hover:-translate-y-0.5 hover:border-navy/30 transition-all"
+                >
+                  <Square size={18} className="text-navy shrink-0" aria-hidden />
+                  <span className="text-sm md:text-base text-charcoal-dark flex-1">{concern.label}</span>
+                  <ArrowRight
+                    size={16}
+                    aria-hidden
+                    className="text-navy shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
+                  />
+                </Link>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
@@ -459,7 +507,7 @@ export default function PersonalReformPage() {
       </section>
 
       {/* 11. 補助金相談 */}
-      <section className="py-24 md:py-32 lg:py-40">
+      <section id="subsidy" className="py-24 md:py-32 lg:py-40 scroll-mt-20">
         <div className="container-content">
           <Reveal>
             <SectionTitle

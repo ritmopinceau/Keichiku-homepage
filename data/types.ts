@@ -90,6 +90,10 @@ export interface SubService {
   englishLabel: string;
   icon: string;
   shortSummary: string;
+  /** サービスハブのカードで見せる、20文字前後の一言訴求コピー */
+  cardDescription: string;
+  /** 工事期間の目安(例: "3日〜1週間") */
+  durationLabel: string;
   heroImage: string;
   heroImageAlt: string;
   overview: string[];

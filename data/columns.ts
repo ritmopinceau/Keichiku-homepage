@@ -73,8 +73,8 @@ export const columns: ColumnArticle[] = [
         ],
       },
     ],
-    relatedServiceHref: "/personal/reform/insulation",
-    relatedServiceLabel: "断熱リフォームの詳細を見る",
+    relatedServiceHref: "/personal/reform/windows-insulation",
+    relatedServiceLabel: "窓・断熱リフォームの詳細を見る",
     faqItems: [
       {
         id: "subsidy-guide-check",

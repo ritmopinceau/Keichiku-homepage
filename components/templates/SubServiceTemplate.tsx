@@ -1,7 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import * as Icons from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { CheckCircle2, HelpCircle, ArrowRight } from "lucide-react";
+import { CheckCircle2, HelpCircle, ArrowRight, Clock, Star } from "lucide-react";
 import PageHero from "@/components/sections/PageHero";
 import SectionTitle from "@/components/sections/SectionTitle";
 import Reveal from "@/components/sections/Reveal";
@@ -12,6 +13,8 @@ import ProjectCard from "@/components/cards/ProjectCard";
 import type { BreadcrumbItem } from "@/components/layout/Breadcrumbs";
 import type { SubService, ProjectCase } from "@/data/types";
 import { siteConfig } from "@/data/siteConfig";
+import { reformFlowSteps, reformTestimonials } from "@/data/reformPageContent";
+import { testimonialImages } from "@/data/placeholderImages";
 
 interface SubServiceTemplateProps {
   subService: SubService;
@@ -127,12 +130,20 @@ export default function SubServiceTemplate({
         </div>
       </section>
 
-      {/* 費用の目安 */}
+      {/* 費用の目安・工事期間 */}
       <section className="py-20 md:py-28 bg-navy">
         <div className="container-content">
           <Reveal>
             <SectionTitle en="Price" ja="費用の目安" light />
           </Reveal>
+          <div className="flex justify-center mb-10">
+            <div className="inline-flex items-center gap-3 bg-white/10 border border-white/20 rounded-full px-6 py-3">
+              <Clock size={20} className="text-gold-light shrink-0" aria-hidden />
+              <span className="text-white text-sm md:text-base">
+                工事期間の目安：<strong className="text-gold-light font-bold">{subService.durationLabel}</strong>
+              </span>
+            </div>
+          </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {subService.priceRanges.map((range, index) => (
               <Reveal key={range.label} delayMs={index * 80}>
@@ -144,8 +155,41 @@ export default function SubServiceTemplate({
             ))}
           </div>
           <p className="mt-8 text-sm text-white/60 text-center leading-relaxed max-w-2xl mx-auto">
-            ※ 価格は目安です。建物の状態や仕様により異なります。正確な金額は現地調査後にお見積りいたします。
+            ※ 価格・工期は目安です。建物の状態や仕様により異なります。正確な金額・工期は現地調査後にご案内いたします。
           </p>
+        </div>
+      </section>
+
+      {/* 工事の流れ */}
+      <section className="py-20 md:py-28 bg-charcoal-dark">
+        <div className="container-content">
+          <Reveal>
+            <SectionTitle en="Flow" ja="ご相談から完了までの流れ" light />
+          </Reveal>
+          <ol className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-10">
+            {reformFlowSteps.map((step, index) => {
+              const IconComponent = getIcon(step.icon);
+              const isRowEnd = (index + 1) % 4 === 0;
+              return (
+                <li key={step.step} className="relative">
+                  <Reveal delayMs={index * 60} className="flex flex-col items-center text-center gap-3">
+                    <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 text-gold-light flex items-center justify-center">
+                      <IconComponent size={26} aria-hidden />
+                    </div>
+                    <p className="font-display italic text-gold-light text-sm">{`0${step.step}`}</p>
+                    <p className="text-white font-bold text-sm md:text-base leading-snug">{step.title}</p>
+                  </Reveal>
+                  {!isRowEnd && (
+                    <Icons.ChevronRight
+                      size={20}
+                      aria-hidden
+                      className="hidden md:block absolute top-6 -right-6 text-white/30"
+                    />
+                  )}
+                </li>
+              );
+            })}
+          </ol>
         </div>
       </section>
 
@@ -164,6 +208,70 @@ export default function SubServiceTemplate({
           </div>
         </section>
       )}
+
+      {/* お客様の声 */}
+      <section className="py-20 md:py-28">
+        <div className="container-content">
+          <Reveal>
+            <SectionTitle en="Voice" ja="お客様の声" />
+          </Reveal>
+          <div className="grid md:grid-cols-3 gap-6">
+            {reformTestimonials.map((testimonial, index) => (
+              <Reveal key={testimonial.name} delayMs={index * 80}>
+                <div className="flex flex-col h-full bg-white rounded-card shadow-card border border-black/5 p-7">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="relative w-14 h-14 rounded-full overflow-hidden shrink-0">
+                      <Image
+                        src={testimonialImages[index % testimonialImages.length]}
+                        alt=""
+                        fill
+                        sizes="56px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <p className="font-bold text-charcoal-dark">{testimonial.name}</p>
+                      <span className="text-xs font-semibold text-gold-dark">{testimonial.workType}</span>
+                    </div>
+                  </div>
+                  <div className="flex gap-0.5 mb-4">
+                    {Array.from({ length: 5 }).map((_, starIndex) => (
+                      <Star
+                        key={starIndex}
+                        size={16}
+                        aria-hidden
+                        className={starIndex < testimonial.rating ? "fill-gold text-gold" : "text-black/15"}
+                      />
+                    ))}
+                  </div>
+                  <p className="text-base text-charcoal-light leading-loose">{testimonial.comment}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 補助金相談への案内 */}
+      <section className="py-14 md:py-16 bg-greige-light">
+        <div className="container-content">
+          <div className="bg-white rounded-card shadow-card border border-black/5 p-7 md:p-9 flex flex-col md:flex-row items-center justify-between gap-5">
+            <div>
+              <p className="text-base md:text-lg font-bold text-charcoal-dark mb-1">補助金相談も承ります</p>
+              <p className="text-sm text-charcoal-light">
+                工事内容によっては、国や自治体の補助金制度を活用できる場合があります。
+              </p>
+            </div>
+            <Link
+              href="/personal/reform#subsidy"
+              className="min-h-[48px] flex items-center gap-2 px-6 rounded-btn border border-navy/30 text-navy font-semibold text-sm shrink-0 hover:bg-navy hover:text-white transition-all"
+            >
+              補助金について見る
+              <ArrowRight size={16} aria-hidden />
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* 無料相談への誘導 */}
       <section className="py-16 md:py-20">

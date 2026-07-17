@@ -16,20 +16,36 @@ export const reformMenuOrder: string[] = [
   "interior",
   "wall-painting",
   "roof",
-  "windows",
-  "insulation",
+  "windows-insulation",
   "floor-plan-change",
   "barrier-free",
   "full-reform",
   "exterior",
   "extension-reduction",
   "earthquake-retrofit",
-  "water-heater-equipment",
   "waterproofing",
+  "water-heater-equipment",
   "wallpaper-flooring",
   "storage",
   "japanese-room",
   "small-repair",
+];
+
+/**
+ * 「お住まいのお悩みから探す」セクション。工事名が分からない検索ユーザー向けの
+ * もう一つの入口。slugはdata/subServices.tsのslugと対応させること。
+ */
+export const reformConcernLinks: { label: string; slug: string }[] = [
+  { label: "キッチンを使いやすくしたい", slug: "kitchen" },
+  { label: "お風呂が寒い", slug: "bath" },
+  { label: "外壁の汚れやヒビが気になる", slug: "wall-painting" },
+  { label: "雨漏りを直したい", slug: "roof" },
+  { label: "家が寒い・暑い", slug: "windows-insulation" },
+  { label: "収納が少ない", slug: "storage" },
+  { label: "子どもの成長に合わせて間取りを変えたい", slug: "floor-plan-change" },
+  { label: "中古住宅を購入してリフォームしたい", slug: "used-home-reform" },
+  { label: "バリアフリーにしたい", slug: "barrier-free" },
+  { label: "小さな修理をお願いしたい", slug: "small-repair" },
 ];
 
 export const reformWorries: { icon: string; label: string }[] = [
