@@ -25,6 +25,7 @@ import {
   reformTestimonials,
   reformStaffMembers,
   reformSubsidyItems,
+  reformMenuOrder,
 } from "@/data/reformPageContent";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -46,7 +47,11 @@ export default function PersonalReformPage() {
   if (!service) return notFound();
 
   const beforeAfterProjects = projects.filter(hasBeforeAfter);
-  const reformSubServices = getSubServicesByParent("personal", "reform");
+  const reformSubServices = [...getSubServicesByParent("personal", "reform")].sort((a, b) => {
+    const rankA = reformMenuOrder.indexOf(a.slug);
+    const rankB = reformMenuOrder.indexOf(b.slug);
+    return (rankA === -1 ? reformMenuOrder.length : rankA) - (rankB === -1 ? reformMenuOrder.length : rankB);
+  });
 
   return (
     <>

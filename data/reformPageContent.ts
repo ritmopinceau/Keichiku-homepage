@@ -4,6 +4,34 @@
  * icon はアイコン名の文字列で指定し、存在しない名前の場合は自動的に既定アイコンにフォールバックします。
  */
 
+/**
+ * 「対応工事メニュー」の表示順。data/subServices.ts の登録順とは独立して
+ * ここで見せたい並びだけを管理する。ここに無いslugは末尾にそのまま追加される。
+ */
+export const reformMenuOrder: string[] = [
+  "kitchen",
+  "bath",
+  "toilet",
+  "washroom",
+  "interior",
+  "wall-painting",
+  "roof",
+  "windows",
+  "insulation",
+  "floor-plan-change",
+  "barrier-free",
+  "full-reform",
+  "exterior",
+  "extension-reduction",
+  "earthquake-retrofit",
+  "water-heater-equipment",
+  "waterproofing",
+  "wallpaper-flooring",
+  "storage",
+  "japanese-room",
+  "small-repair",
+];
+
 export const reformWorries: { icon: string; label: string }[] = [
   { icon: "ChefHat", label: "キッチンが古くなった" },
   { icon: "Bath", label: "お風呂が寒い" },

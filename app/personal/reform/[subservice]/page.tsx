@@ -3,6 +3,7 @@ import SubServiceTemplate from "@/components/templates/SubServiceTemplate";
 import { getService } from "@/data/services";
 import { getSubService, getSubServicesByParent, subServices } from "@/data/subServices";
 import { projects } from "@/data/projects";
+import { reformMenuOrder } from "@/data/reformPageContent";
 import { buildMetadata } from "@/lib/metadata";
 
 export function generateStaticParams() {
@@ -31,6 +32,11 @@ export default function ReformSubServicePage({ params }: { params: { subservice:
     .slice(0, 3);
   const siblingSubServices = getSubServicesByParent("personal", "reform")
     .filter((s) => s.slug !== subService.slug)
+    .sort((a, b) => {
+      const rankA = reformMenuOrder.indexOf(a.slug);
+      const rankB = reformMenuOrder.indexOf(b.slug);
+      return (rankA === -1 ? reformMenuOrder.length : rankA) - (rankB === -1 ? reformMenuOrder.length : rankB);
+    })
     .slice(0, 8);
 
   return (
