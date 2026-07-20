@@ -60,7 +60,7 @@ export const subServices: SubService[] = [
     ],
     relatedProjectCategory: "住宅リフォーム",
     metaDescription:
-      "〇〇市のキッチンリフォームなら〇〇建設・不動産へ。対面式への変更、システムキッチンの交換、収納増設まで費用の目安とあわせてご案内します。現地調査・お見積り無料。",
+      "〇〇市のキッチンリフォームなら拓工建設グループへ。対面式への変更、システムキッチンの交換、収納増設まで費用の目安とあわせてご案内します。現地調査・お見積り無料。",
   },
   {
     parentCategory: "personal",
@@ -110,7 +110,7 @@ export const subServices: SubService[] = [
     ],
     relatedProjectCategory: "住宅リフォーム",
     metaDescription:
-      "〇〇市の浴室リフォームなら〇〇建設・不動産へ。ユニットバスへの交換、断熱・ヒートショック対策、バリアフリー化まで費用目安とあわせてご案内します。",
+      "〇〇市の浴室リフォームなら拓工建設グループへ。ユニットバスへの交換、断熱・ヒートショック対策、バリアフリー化まで費用目安とあわせてご案内します。",
   },
   {
     parentCategory: "personal",
@@ -160,7 +160,7 @@ export const subServices: SubService[] = [
     ],
     relatedProjectCategory: "住宅リフォーム",
     metaDescription:
-      "〇〇市のトイレリフォームなら〇〇建設・不動産へ。便器交換から内装、バリアフリー化まで費用の目安とあわせてご案内します。現地調査・お見積り無料。",
+      "〇〇市のトイレリフォームなら拓工建設グループへ。便器交換から内装、バリアフリー化まで費用の目安とあわせてご案内します。現地調査・お見積り無料。",
   },
   {
     parentCategory: "personal",
@@ -209,7 +209,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リフォーム",
-    metaDescription: "〇〇市の洗面所リフォームなら〇〇建設・不動産へ。洗面化粧台の交換から収納増設、断熱リフォームまでご案内します。",
+    metaDescription: "〇〇市の洗面所リフォームなら拓工建設グループへ。洗面化粧台の交換から収納増設、断熱リフォームまでご案内します。",
   },
   {
     parentCategory: "personal",
@@ -258,7 +258,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リフォーム",
-    metaDescription: "〇〇市の外壁塗装なら〇〇建設・不動産へ。劣化診断から塗料選び、費用目安まで分かりやすくご案内します。現地調査・お見積り無料。",
+    metaDescription: "〇〇市の外壁塗装なら拓工建設グループへ。劣化診断から塗料選び、費用目安まで分かりやすくご案内します。現地調査・お見積り無料。",
   },
   {
     parentCategory: "personal",
@@ -307,7 +307,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リフォーム",
-    metaDescription: "〇〇市の屋根工事なら〇〇建設・不動産へ。雨漏り補修、葺き替え、カバー工法まで費用の目安とあわせてご案内します。",
+    metaDescription: "〇〇市の屋根工事なら拓工建設グループへ。雨漏り補修、葺き替え、カバー工法まで費用の目安とあわせてご案内します。",
   },
   {
     parentCategory: "personal",
@@ -370,7 +370,7 @@ export const subServices: SubService[] = [
     ],
     relatedProjectCategory: "住宅リフォーム",
     metaDescription:
-      "〇〇市の窓・断熱リフォームなら〇〇建設・不動産へ。内窓設置・複層ガラス交換・断熱材施工で夏涼しく冬暖かい住まいに。補助金相談も承ります。",
+      "〇〇市の窓・断熱リフォームなら拓工建設グループへ。内窓設置・複層ガラス交換・断熱材施工で夏涼しく冬暖かい住まいに。補助金相談も承ります。",
   },
   {
     parentCategory: "personal",
@@ -419,7 +419,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リフォーム",
-    metaDescription: "〇〇市のバリアフリーリフォームなら〇〇建設・不動産へ。手すり設置、段差解消、介護保険を利用した住宅改修までご案内します。",
+    metaDescription: "〇〇市のバリアフリーリフォームなら拓工建設グループへ。手すり設置、段差解消、介護保険を利用した住宅改修までご案内します。",
   },
   {
     parentCategory: "personal",
@@ -469,7 +469,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リフォーム",
-    metaDescription: "〇〇市の全面リフォームなら〇〇建設・不動産へ。水まわりから間取り変更、耐震・断熱まで住まい全体をまとめて改修します。",
+    metaDescription: "〇〇市の全面リフォームなら拓工建設グループへ。水まわりから間取り変更、耐震・断熱まで住まい全体をまとめて改修します。",
   },
   {
     parentCategory: "personal",
@@ -518,7 +518,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リフォーム",
-    metaDescription: "〇〇市の中古住宅リフォームなら〇〇建設・不動産へ。インスペクションから資金計画、リフォームまで一括でサポートします。",
+    metaDescription: "〇〇市の中古住宅リフォームなら拓工建設グループへ。インスペクションから資金計画、リフォームまで一括でサポートします。",
   },
   {
     parentCategory: "personal",
@@ -567,7 +567,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リノベーション",
-    metaDescription: "〇〇市のマンションリフォームなら〇〇建設・不動産へ。スケルトンリフォームから水まわり交換まで、管理規約に配慮して対応します。",
+    metaDescription: "〇〇市のマンションリフォームなら拓工建設グループへ。スケルトンリフォームから水まわり交換まで、管理規約に配慮して対応します。",
   },
   {
     parentCategory: "personal",
@@ -616,7 +616,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リフォーム",
-    metaDescription: "〇〇市の内装リフォームなら〇〇建設・不動産へ。壁紙・床材・建具の張り替えから部屋全体の模様替えまで費用目安とあわせてご案内します。",
+    metaDescription: "〇〇市の内装リフォームなら拓工建設グループへ。壁紙・床材・建具の張り替えから部屋全体の模様替えまで費用目安とあわせてご案内します。",
   },
   {
     parentCategory: "personal",
@@ -665,7 +665,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リフォーム",
-    metaDescription: "〇〇市のエクステリア工事なら〇〇建設・不動産へ。カーポート新設、門扉・フェンス交換、お庭の整備まで費用目安とあわせてご案内します。",
+    metaDescription: "〇〇市のエクステリア工事なら拓工建設グループへ。カーポート新設、門扉・フェンス交換、お庭の整備まで費用目安とあわせてご案内します。",
   },
   {
     parentCategory: "personal",
@@ -714,7 +714,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リフォーム",
-    metaDescription: "〇〇市の間取り変更なら〇〇建設・不動産へ。壁の撤去・新設によるLDKの一体化など、暮らし方に合わせたプランをご提案します。",
+    metaDescription: "〇〇市の間取り変更なら拓工建設グループへ。壁の撤去・新設によるLDKの一体化など、暮らし方に合わせたプランをご提案します。",
   },
   {
     parentCategory: "personal",
@@ -763,7 +763,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リフォーム",
-    metaDescription: "〇〇市の増築・減築なら〇〇建設・不動産へ。部屋を増やす増築から管理しやすくする減築まで、法的な制限の確認から対応します。",
+    metaDescription: "〇〇市の増築・減築なら拓工建設グループへ。部屋を増やす増築から管理しやすくする減築まで、法的な制限の確認から対応します。",
   },
   {
     parentCategory: "personal",
@@ -812,7 +812,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リフォーム",
-    metaDescription: "〇〇市の耐震リフォームなら〇〇建設・不動産へ。耐震診断から補強工事まで、地震に強い住まいづくりをサポートします。補助金相談も承ります。",
+    metaDescription: "〇〇市の耐震リフォームなら拓工建設グループへ。耐震診断から補強工事まで、地震に強い住まいづくりをサポートします。補助金相談も承ります。",
   },
   {
     parentCategory: "personal",
@@ -861,7 +861,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リフォーム",
-    metaDescription: "〇〇市の給湯器・設備交換なら〇〇建設・不動産へ。給湯器、エアコン、換気設備の交換まで費用目安とあわせてご案内します。",
+    metaDescription: "〇〇市の給湯器・設備交換なら拓工建設グループへ。給湯器、エアコン、換気設備の交換まで費用目安とあわせてご案内します。",
   },
   {
     parentCategory: "personal",
@@ -910,7 +910,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リフォーム",
-    metaDescription: "〇〇市の防水工事なら〇〇建設・不動産へ。屋上・ベランダ・バルコニーの防水工事で雨漏りを未然に防ぎます。",
+    metaDescription: "〇〇市の防水工事なら拓工建設グループへ。屋上・ベランダ・バルコニーの防水工事で雨漏りを未然に防ぎます。",
   },
   {
     parentCategory: "personal",
@@ -959,7 +959,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リフォーム",
-    metaDescription: "〇〇市のクロス・床張替えなら〇〇建設・不動産へ。壁紙・フローリングの張替えで、お部屋の印象を手軽にリフレッシュします。",
+    metaDescription: "〇〇市のクロス・床張替えなら拓工建設グループへ。壁紙・フローリングの張替えで、お部屋の印象を手軽にリフレッシュします。",
   },
   {
     parentCategory: "personal",
@@ -1008,7 +1008,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リフォーム",
-    metaDescription: "〇〇市の収納リフォームなら〇〇建設・不動産へ。クローゼット・パントリーの新設からデッドスペースの活用まで対応します。",
+    metaDescription: "〇〇市の収納リフォームなら拓工建設グループへ。クローゼット・パントリーの新設からデッドスペースの活用まで対応します。",
   },
   {
     parentCategory: "personal",
@@ -1057,7 +1057,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リフォーム",
-    metaDescription: "〇〇市の和室リフォームなら〇〇建設・不動産へ。畳・襖・障子の張替えから和室から洋室への変更まで対応します。",
+    metaDescription: "〇〇市の和室リフォームなら拓工建設グループへ。畳・襖・障子の張替えから和室から洋室への変更まで対応します。",
   },
   {
     parentCategory: "personal",
@@ -1106,7 +1106,7 @@ export const subServices: SubService[] = [
       },
     ],
     relatedProjectCategory: "住宅リフォーム",
-    metaDescription: "〇〇市の小規模修繕・修理なら〇〇建設・不動産へ。水漏れ、建具の不具合など、小さな困りごとから気軽にご相談いただけます。",
+    metaDescription: "〇〇市の小規模修繕・修理なら拓工建設グループへ。水漏れ、建具の不具合など、小さな困りごとから気軽にご相談いただけます。",
   },
 ];
 

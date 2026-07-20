@@ -147,7 +147,7 @@ export const services: ServiceDetail[] = [
     faqIds: ["free-consultation", "small-scale", "during-construction", "area"],
     relatedProjectCategory: "住宅リフォーム",
     metaDescription:
-      "〇〇市の住宅リフォームなら〇〇建設・不動産へ。キッチン・浴室・トイレなどの水まわりから内装、外壁・屋根、間取り変更まで幅広く対応します。",
+      "〇〇市の住宅リフォームなら拓工建設グループへ。キッチン・浴室・トイレなどの水まわりから内装、外壁・屋根、間取り変更まで幅広く対応します。",
   },
   {
     slug: "newbuild",
@@ -199,7 +199,7 @@ export const services: ServiceDetail[] = [
     faqIds: ["free-consultation", "land-search", "area", "combined-request"],
     relatedProjectCategory: "新築住宅",
     metaDescription:
-      "〇〇市の新築住宅・注文住宅なら〇〇建設・不動産へ。土地探しから資金計画、設計・施工、アフターメンテナンスまでワンストップで対応します。",
+      "〇〇市の新築住宅・注文住宅なら拓工建設グループへ。土地探しから資金計画、設計・施工、アフターメンテナンスまでワンストップで対応します。",
   },
   {
     slug: "renovation",
@@ -250,7 +250,7 @@ export const services: ServiceDetail[] = [
     faqIds: ["free-consultation", "land-search", "vacant-house-inherited", "combined-request"],
     relatedProjectCategory: "住宅リノベーション",
     metaDescription:
-      "〇〇市の住宅リノベーションなら〇〇建設・不動産へ。中古戸建て・マンションリノベーション、物件探しからの一括相談まで対応します。",
+      "〇〇市の住宅リノベーションなら拓工建設グループへ。中古戸建て・マンションリノベーション、物件探しからの一括相談まで対応します。",
   },
 
   // ---------- 法人のお客様 ----------
@@ -305,7 +305,7 @@ export const services: ServiceDetail[] = [
     faqIds: ["free-consultation", "land-search", "combined-request", "area"],
     relatedProjectCategory: "法人向け新築",
     metaDescription:
-      "〇〇市で法人向け新築工事なら〇〇建設・不動産へ。店舗・オフィス・倉庫・福祉施設など、事業計画に合わせた建物を設計・施工します。",
+      "〇〇市で法人向け新築工事なら拓工建設グループへ。店舗・オフィス・倉庫・福祉施設など、事業計画に合わせた建物を設計・施工します。",
   },
   {
     slug: "renovation-construction",
@@ -359,7 +359,7 @@ export const services: ServiceDetail[] = [
     faqIds: ["free-consultation", "during-construction", "area", "small-scale"],
     relatedProjectCategory: "改修工事",
     metaDescription:
-      "〇〇市の法人向け改修工事なら〇〇建設・不動産へ。内装・外壁・屋根の改修から耐震改修、大規模修繕まで幅広く対応します。",
+      "〇〇市の法人向け改修工事なら拓工建設グループへ。内装・外壁・屋根の改修から耐震改修、大規模修繕まで幅広く対応します。",
   },
   {
     slug: "renovation",
@@ -411,7 +411,7 @@ export const services: ServiceDetail[] = [
     faqIds: ["free-consultation", "combined-request", "during-construction", "area"],
     relatedProjectCategory: "法人向けリノベーション",
     metaDescription:
-      "〇〇市の法人向けリノベーションなら〇〇建設・不動産へ。店舗・オフィス・施設のリノベーション、用途変更、空き物件活用まで対応します。",
+      "〇〇市の法人向けリノベーションなら拓工建設グループへ。店舗・オフィス・施設のリノベーション、用途変更、空き物件活用まで対応します。",
   },
 
   // ---------- 不動産 ----------
@@ -463,7 +463,7 @@ export const services: ServiceDetail[] = [
     faqIds: ["valuation-only", "vacant-house-inherited", "combined-request", "area"],
     relatedProjectCategory: "sale",
     metaDescription:
-      "〇〇市の不動産売買なら〇〇建設・不動産へ。戸建て・マンション・土地・事業用物件の購入や売却、査定まで対応します。",
+      "〇〇市の不動産売買なら拓工建設グループへ。戸建て・マンション・土地・事業用物件の購入や売却、査定まで対応します。",
   },
   {
     slug: "rent",
@@ -515,7 +515,7 @@ export const services: ServiceDetail[] = [
     faqIds: ["area", "during-construction", "combined-request", "free-consultation"],
     relatedProjectCategory: "rent",
     metaDescription:
-      "〇〇市の賃貸物件なら〇〇建設・不動産へ。住居用マンション・アパートから店舗・事務所などの事業用物件まで幅広くご案内します。",
+      "〇〇市の賃貸物件なら拓工建設グループへ。住居用マンション・アパートから店舗・事務所などの事業用物件まで幅広くご案内します。",
   },
   {
     slug: "purchase",
@@ -568,7 +568,7 @@ export const services: ServiceDetail[] = [
     faqIds: ["vacant-house-inherited", "valuation-only", "free-consultation", "area"],
     relatedProjectCategory: "sale",
     metaDescription:
-      "〇〇市の不動産買取なら〇〇建設・不動産へ。老朽化した建物、空き家、相続不動産など、早期現金化のご相談に対応します。",
+      "〇〇市の不動産買取なら拓工建設グループへ。老朽化した建物、空き家、相続不動産など、早期現金化のご相談に対応します。",
   },
   {
     slug: "management",
@@ -620,7 +620,7 @@ export const services: ServiceDetail[] = [
     faqIds: ["free-consultation", "area", "during-construction", "combined-request"],
     relatedProjectCategory: "rent",
     metaDescription:
-      "〇〇市の不動産管理なら〇〇建設・不動産へ。入居者募集から家賃管理、修繕・メンテナンス、空室対策までオーナー様をサポートします。",
+      "〇〇市の不動産管理なら拓工建設グループへ。入居者募集から家賃管理、修繕・メンテナンス、空室対策までオーナー様をサポートします。",
   },
 ];
 
