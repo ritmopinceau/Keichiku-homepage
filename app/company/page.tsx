@@ -11,6 +11,7 @@ export const metadata = buildMetadata({
   title: "会社案内",
   description: `${siteConfig.siteName}の会社概要、代表メッセージ、事業内容、建設業許可・宅地建物取引業免許などをご紹介します。`,
   path: "/company",
+  languageAlternates: { ja: "/company", en: "/en/company", zh: "/zh/company", vi: "/vi/company", "x-default": "/company" },
 });
 
 const overviewRows: { label: string; value: string }[] = [
