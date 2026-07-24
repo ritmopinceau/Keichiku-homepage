@@ -17,6 +17,15 @@ const staticPaths = [
   "/company",
   "/contact",
   "/privacy",
+  "/en",
+  "/en/company",
+  "/en/contact",
+  "/zh",
+  "/zh/company",
+  "/zh/contact",
+  "/vi",
+  "/vi/company",
+  "/vi/contact",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
