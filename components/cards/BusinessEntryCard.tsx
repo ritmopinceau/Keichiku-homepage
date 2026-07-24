@@ -14,7 +14,7 @@ interface BusinessEntryCardProps {
 }
 
 /**
- * トップページの「3つの事業への入口」大型カード。
+ * トップページや/constructionの「事業への入口」大型カード。
  */
 export default function BusinessEntryCard({
   englishLabel,

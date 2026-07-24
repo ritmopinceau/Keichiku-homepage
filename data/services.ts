@@ -1,8 +1,8 @@
 import { ServiceDetail, StrengthItem, FlowStep, BusinessCategory } from "./types";
-import { heroImages, serviceImages, strengthImages } from "./placeholderImages";
+import { heroImages, serviceImages, strengthImages, subServiceImages } from "./placeholderImages";
 
-export const businessCategories: {
-  key: BusinessCategory;
+interface BusinessEntry {
+  key: string;
   englishLabel: string;
   headline: string;
   description: string;
@@ -11,7 +11,42 @@ export const businessCategories: {
   href: string;
   image: string;
   imageAlt: string;
-}[] = [
+}
+
+/**
+ * トップページの入口カード。建築(拓工建設)と不動産(ニッタク産業)の
+ * グループ2社構成に合わせて、まず「建築」「不動産」の2つに分けている。
+ * 「建築」の先で個人・法人を選んでいただく流れは constructionAudiences を参照。
+ */
+export const businessCategories: BusinessEntry[] = [
+  {
+    key: "construction",
+    englishLabel: "Construction",
+    headline: "建てる、直す、活かす建築",
+    description:
+      "住宅リフォーム・新築から、店舗・オフィスなど法人のお客様の工事まで。個人のお客様・法人のお客様それぞれの目的に合わせた建築をご提案します。",
+    items: ["住宅リフォーム・新築", "法人向け工事", "リノベーション"],
+    buttonLabel: "建築サービスを見る",
+    href: "/construction",
+    image: subServiceImages.fullReform,
+    imageAlt: "建築工事の様子",
+  },
+  {
+    key: "realestate",
+    englishLabel: "Real Estate",
+    headline: "不動産の価値をつなぐ",
+    description:
+      "不動産の売買、賃貸、買取、管理まで、建築の知識を活かした総合的なご提案を行います。",
+    items: ["売買", "賃貸", "買取", "管理"],
+    buttonLabel: "不動産サービスを見る",
+    href: "/realestate",
+    image: heroImages.realestate,
+    imageAlt: "街並みと不動産物件",
+  },
+];
+
+/** /construction ページで「個人のお客様」「法人のお客様」を選んでいただくためのカード */
+export const constructionAudiences: BusinessEntry[] = [
   {
     key: "personal",
     englishLabel: "For Individual",
@@ -35,18 +70,6 @@ export const businessCategories: {
     href: "/corporate",
     image: heroImages.corporate,
     imageAlt: "スタイリッシュなオフィスの内観",
-  },
-  {
-    key: "realestate",
-    englishLabel: "Real Estate",
-    headline: "不動産の価値をつなぐ",
-    description:
-      "不動産の売買、賃貸、買取、管理まで、建築の知識を活かした総合的なご提案を行います。",
-    items: ["売買", "賃貸", "買取", "管理"],
-    buttonLabel: "不動産サービスを見る",
-    href: "/realestate",
-    image: heroImages.realestate,
-    imageAlt: "街並みと不動産物件",
   },
 ];
 

@@ -8,6 +8,7 @@ import { columns } from "@/data/columns";
 
 const staticPaths = [
   "/",
+  "/construction",
   "/personal",
   "/corporate",
   "/realestate",

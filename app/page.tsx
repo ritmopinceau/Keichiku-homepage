@@ -33,17 +33,17 @@ export default function HomePage() {
     <>
       <HeroSection />
 
-      {/* 3つの事業への入口 */}
+      {/* 2つの事業への入口 */}
       <section className="py-24 md:py-32 lg:py-40">
         <div className="container-content">
           <Reveal>
             <SectionTitle
               en="Our Business"
-              ja="3つの事業でワンストップに対応"
-              description="住まいや建物に関するご相談は、個人のお客様・法人のお客様・不動産の3つの窓口からお選びいただけます。"
+              ja="建築と不動産、2つの窓口でワンストップに対応"
+              description="住まいや建物に関するご相談は、建築・不動産の2つの窓口からお選びいただけます。建築は個人のお客様・法人のお客様それぞれに合わせてご案内します。"
             />
           </Reveal>
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             {businessCategories.map((biz, index) => (
               <Reveal key={biz.key} delayMs={index * 100}>
                 <BusinessEntryCard
