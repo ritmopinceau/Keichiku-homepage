@@ -21,6 +21,7 @@ export const metadata = buildMetadata({
   description:
     "〇〇市・〇〇県の建築会社・不動産会社。住宅リフォーム、新築住宅、住宅リノベーション、法人向け新築・改修・リノベーション、不動産の売買・賃貸・買取・管理までワンストップで対応します。",
   path: "/",
+  languageAlternates: { ja: "/", en: "/en", zh: "/zh", vi: "/vi", "x-default": "/" },
 });
 
 export default function HomePage() {
