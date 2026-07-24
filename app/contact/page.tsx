@@ -10,6 +10,7 @@ export const metadata = buildMetadata({
   description:
     "住宅リフォーム、新築住宅、法人向け工事、不動産の売買・賃貸・買取・管理など、建築・不動産に関するお問い合わせはこちらから。",
   path: "/contact",
+  languageAlternates: { ja: "/contact", en: "/en/contact", zh: "/zh/contact", vi: "/vi/contact", "x-default": "/contact" },
 });
 
 export default function ContactPage() {
