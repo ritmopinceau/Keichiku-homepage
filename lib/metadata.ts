@@ -6,13 +6,15 @@ interface BuildMetadataArgs {
   description: string;
   path: string;
   image?: string;
+  /** 多言語版が存在するページのみ指定。キーがhreflang値、値がパス(例: "/", "/en", "/zh", "/vi") */
+  languageAlternates?: Record<string, string>;
 }
 
 /**
  * 各ページの title / description / canonical / OGP をまとめて生成するヘルパー。
  * ページ側では buildMetadata({ title, description, path }) を呼ぶだけで済むようにする。
  */
-export function buildMetadata({ title, description, path, image }: BuildMetadataArgs): Metadata {
+export function buildMetadata({ title, description, path, image, languageAlternates }: BuildMetadataArgs): Metadata {
   const url = `${siteConfig.siteUrl}${path}`;
   const ogImage = image ?? siteConfig.ogImage;
 
@@ -22,6 +24,11 @@ export function buildMetadata({ title, description, path, image }: BuildMetadata
     description,
     alternates: {
       canonical: url,
+      ...(languageAlternates && {
+        languages: Object.fromEntries(
+          Object.entries(languageAlternates).map(([lang, langPath]) => [lang, `${siteConfig.siteUrl}${langPath}`])
+        ),
+      }),
     },
     openGraph: {
       title: `${title}｜${siteConfig.siteName}`,
