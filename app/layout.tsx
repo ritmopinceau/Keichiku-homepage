@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MobileBottomNav from "@/components/layout/MobileBottomNav";
+import HtmlLangSync from "@/components/layout/HtmlLangSync";
 import { MobileMenuProvider } from "@/components/layout/MobileMenuContext";
 import { siteConfig } from "@/data/siteConfig";
 
@@ -60,6 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja">
       <body className="font-sans antialiased">
+        <HtmlLangSync />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
