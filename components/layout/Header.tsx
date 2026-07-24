@@ -7,6 +7,7 @@ import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import { headerNav, siteConfig } from "@/data/siteConfig";
 import type { NavItem } from "@/data/types";
 import { useMobileMenu } from "./MobileMenuContext";
+import LanguageSwitcher, { languageLabels, resolveLocalePath } from "./LanguageSwitcher";
 
 export default function Header() {
   const pathname = usePathname();
@@ -78,6 +79,7 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
+          <LanguageSwitcher />
           <a href={siteConfig.company.phoneHref} className="flex items-center gap-1.5 text-sm text-charcoal-dark hover:text-navy">
             <Phone size={16} aria-hidden />
             <span className="font-semibold">{siteConfig.company.phoneDisplay}</span>
@@ -106,6 +108,7 @@ export default function Header() {
       {mobileOpen && (
         <div className="lg:hidden bg-white border-t border-black/5 max-h-[calc(100vh-64px)] overflow-y-auto">
           <nav className="container-content py-2" aria-label="モバイルナビゲーション">
+            <MobileLanguageRow />
             {headerNav.map((item) => (
               <MobileNavItem
                 key={item.label}
@@ -133,6 +136,23 @@ export default function Header() {
         </div>
       )}
     </header>
+  );
+}
+
+function MobileLanguageRow() {
+  const pathname = usePathname();
+  return (
+    <div className="flex flex-wrap gap-2 py-3 border-b border-black/5" aria-label="言語切り替え">
+      {(["ja", "en", "zh", "vi"] as const).map((lang) => (
+        <Link
+          key={lang}
+          href={resolveLocalePath(pathname, lang)}
+          className="min-h-[36px] flex items-center px-3 rounded-full border border-black/10 text-xs font-medium text-charcoal-dark"
+        >
+          {languageLabels[lang]}
+        </Link>
+      ))}
+    </div>
   );
 }
 
