@@ -104,3 +104,8 @@ export const subServiceImages = {
   japaneseRoom: unsplash("photo-1615529182904-14819c35db37"),
   smallRepair: unsplash("photo-1517646287270-a5a9ca602e5c"),
 };
+
+// コラム(工場・倉庫向け記事)で使用する画像
+export const factoryImages = {
+  warehouseInterior: unsplash("photo-1553413077-190dd305871c"),
+};

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarDays, ArrowRight } from "lucide-react";
+import { CalendarDays, ArrowRight, CheckCircle2 } from "lucide-react";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import ContactBanner from "@/components/sections/ContactBanner";
@@ -78,11 +78,32 @@ export default function ColumnDetailPage({ params }: { params: { slug: string } 
                   {section.heading}
                 </h2>
                 <div className="space-y-4">
-                  {section.paragraphs.map((paragraph, index) => (
-                    <p key={index} className="text-base md:text-lg text-charcoal-light leading-loose">
-                      {paragraph}
-                    </p>
-                  ))}
+                  {section.blocks.map((block, index) =>
+                    block.type === "p" ? (
+                      <p key={index} className="text-base md:text-lg text-charcoal-light leading-loose">
+                        {block.text}
+                      </p>
+                    ) : (
+                      <ul key={index} className="space-y-3">
+                        {block.items.map((item, itemIndex) => (
+                          <li
+                            key={itemIndex}
+                            className="flex items-start gap-3 bg-greige-light rounded-card px-5 py-4"
+                          >
+                            <CheckCircle2 size={18} className="text-gold shrink-0 mt-1" aria-hidden />
+                            <div>
+                              <p className="font-semibold text-charcoal-dark">{item.label}</p>
+                              {item.description && (
+                                <p className="text-sm text-charcoal-light mt-1 leading-relaxed">
+                                  {item.description}
+                                </p>
+                              )}
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    )
+                  )}
                 </div>
               </section>
             ))}

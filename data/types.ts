@@ -147,11 +147,25 @@ export interface NewsItem {
   href?: string;
 }
 
-export type ColumnCategory = "費用・相場" | "補助金・制度" | "会社選び" | "工事の基礎知識" | "リノベーション";
+export type ColumnCategory =
+  | "費用・相場"
+  | "補助金・制度"
+  | "会社選び"
+  | "工事の基礎知識"
+  | "リノベーション"
+  | "工場・倉庫向け";
+
+export interface ColumnListItem {
+  label: string;
+  description?: string;
+}
+
+/** 段落と箇条書きを、文章内での登場順に並べたブロック */
+export type ColumnBlock = { type: "p"; text: string } | { type: "list"; items: ColumnListItem[] };
 
 export interface ColumnSection {
   heading: string;
-  paragraphs: string[];
+  blocks: ColumnBlock[];
 }
 
 export interface ColumnArticle {
