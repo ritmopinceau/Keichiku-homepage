@@ -108,4 +108,5 @@ export const subServiceImages = {
 // コラム(工場・倉庫向け記事)で使用する画像
 export const factoryImages = {
   warehouseInterior: unsplash("photo-1553413077-190dd305871c"),
+  warehouseAisle: unsplash("photo-1587293852726-70cdb56c2866"),
 };
