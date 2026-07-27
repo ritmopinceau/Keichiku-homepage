@@ -68,9 +68,13 @@ export default function HomePage() {
           <Reveal>
             <SectionTitle en="Our Strength" ja="私たちの強み" />
           </Reveal>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+          <div className="flex flex-wrap justify-center gap-6 pt-4">
             {companyStrengths.map((strength, index) => (
-              <Reveal key={strength.title} delayMs={index * 80}>
+              <Reveal
+                key={strength.title}
+                delayMs={index * 80}
+                className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(20%-1.2rem)]"
+              >
                 <StrengthCard {...strength} />
               </Reveal>
             ))}

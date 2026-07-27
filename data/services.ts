@@ -102,6 +102,13 @@ export const companyStrengths: (StrengthItem & { icon: string; image: string })[
     icon: "MapPin",
     image: strengthImages.localSupport,
   },
+  {
+    title: "創業からの実績と信頼",
+    description:
+      "昭和31年の創業から、地域のお客様とともに歩んできた実績があります。長年培った技術と信頼で対応します。",
+    icon: "Award",
+    image: strengthImages.trackRecord,
+  },
 ];
 
 export const defaultFlowSteps: FlowStep[] = [

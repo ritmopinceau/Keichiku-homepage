@@ -33,6 +33,7 @@ export const strengthImages = {
   bothClients: unsplash("photo-1556909114-f6e7ad7d3136", 800),
   valueFocused: unsplash("photo-1486406146926-c627a92ad1ab", 800),
   localSupport: unsplash("photo-1449844908441-8829872d2607", 800),
+  trackRecord: unsplash("photo-1600880292203-757bb62b4baf", 800),
 };
 
 // サービス詳細ページ「当社の強み」欄で、強み1〜3個目に順番に割り当てる写真
