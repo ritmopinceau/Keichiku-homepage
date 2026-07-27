@@ -75,21 +75,11 @@ export const siteConfig = {
 export const headerNav: NavItem[] = [
   { label: "ホーム", href: "/" },
   {
-    label: "個人のお客様",
-    href: "/personal",
+    label: "建築",
+    href: "/construction",
     children: [
-      { label: "住宅リフォーム", href: "/personal/reform" },
-      { label: "新築住宅", href: "/personal/newbuild" },
-      { label: "住宅リノベーション", href: "/personal/renovation" },
-    ],
-  },
-  {
-    label: "法人のお客様",
-    href: "/corporate",
-    children: [
-      { label: "新築工事", href: "/corporate/newbuild" },
-      { label: "改修工事", href: "/corporate/renovation-construction" },
-      { label: "リノベーション", href: "/corporate/renovation" },
+      { label: "個人のお客様", href: "/personal" },
+      { label: "法人のお客様", href: "/corporate" },
     ],
   },
   {
@@ -110,8 +100,7 @@ export const headerNav: NavItem[] = [
 ];
 
 export const footerNav: NavItem[] = [
-  { label: "個人のお客様", href: "/personal" },
-  { label: "法人のお客様", href: "/corporate" },
+  { label: "建築", href: "/construction" },
   { label: "不動産", href: "/realestate" },
   { label: "コラム", href: "/columns" },
   { label: "施工事例", href: "/projects" },
