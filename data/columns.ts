@@ -385,8 +385,8 @@ export const columns: ColumnArticle[] = [
         ],
       },
     ],
-    relatedServiceHref: "/corporate",
-    relatedServiceLabel: "法人のお客様向けサービスを見る",
+    relatedServiceHref: "/corporate/renovation-construction/heat-shield-sheet",
+    relatedServiceLabel: "遮熱シート施工の詳細を見る",
     faqItems: [
       {
         id: "heat-shield-aircon-only",

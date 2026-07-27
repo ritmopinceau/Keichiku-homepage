@@ -1,5 +1,8 @@
 import Image from "next/image";
-import { CheckCircle2, HelpCircle } from "lucide-react";
+import Link from "next/link";
+import * as Icons from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { CheckCircle2, HelpCircle, ArrowRight } from "lucide-react";
 import PageHero from "@/components/sections/PageHero";
 import SectionTitle from "@/components/sections/SectionTitle";
 import Reveal from "@/components/sections/Reveal";
@@ -9,7 +12,7 @@ import ContactBanner from "@/components/sections/ContactBanner";
 import ProjectCard from "@/components/cards/ProjectCard";
 import PropertyCard from "@/components/cards/PropertyCard";
 import type { BreadcrumbItem } from "@/components/layout/Breadcrumbs";
-import type { ServiceDetail, ProjectCase, PropertyItem } from "@/data/types";
+import type { ServiceDetail, ProjectCase, PropertyItem, SubService } from "@/data/types";
 import { getFaqByIds } from "@/data/faq";
 import { defaultFlowSteps } from "@/data/services";
 import { serviceStrengthImages } from "@/data/placeholderImages";
@@ -20,6 +23,12 @@ interface ServiceDetailTemplateProps {
   breadcrumbs: BreadcrumbItem[];
   relatedProjects?: ProjectCase[];
   relatedProperties?: PropertyItem[];
+  /** このサービスの下にぶら下がる、より専門的な工事内容別ページ(あれば表示) */
+  relatedSubServices?: SubService[];
+}
+
+function getIcon(name: string): LucideIcon {
+  return (Icons as unknown as Record<string, LucideIcon>)[name] ?? Icons.Building2;
 }
 
 /**
@@ -32,6 +41,7 @@ export default function ServiceDetailTemplate({
   breadcrumbs,
   relatedProjects,
   relatedProperties,
+  relatedSubServices,
 }: ServiceDetailTemplateProps) {
   const faqItems = getFaqByIds(service.faqIds);
   const isRealEstate = service.category === "realestate";
@@ -163,6 +173,40 @@ export default function ServiceDetailTemplate({
           </div>
         </section>
       ) : null}
+
+      {/* 専門的な工事内容(あれば) */}
+      {relatedSubServices && relatedSubServices.length > 0 && (
+        <section className="py-24 md:py-32 lg:py-40">
+          <div className="container-content">
+            <Reveal>
+              <SectionTitle en="Special Menu" ja="専門的な工事内容" />
+            </Reveal>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {relatedSubServices.map((sub, index) => {
+                const IconComponent = getIcon(sub.icon);
+                return (
+                  <Reveal key={sub.slug} delayMs={index * 80}>
+                    <Link
+                      href={`/${sub.parentCategory}/${sub.parentSlug}/${sub.slug}`}
+                      className="group flex flex-col h-full bg-white border border-black/5 shadow-card rounded-card p-7 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
+                    >
+                      <div className="w-12 h-12 rounded-full bg-gold/10 text-gold-dark flex items-center justify-center mb-4">
+                        <IconComponent size={22} aria-hidden />
+                      </div>
+                      <h3 className="font-bold text-charcoal-dark text-lg mb-2">{sub.title}</h3>
+                      <p className="text-sm text-charcoal-light leading-loose mb-5">{sub.shortSummary}</p>
+                      <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-navy group-hover:gap-3 transition-all">
+                        詳しく見る
+                        <ArrowRight size={14} aria-hidden />
+                      </span>
+                    </Link>
+                  </Reveal>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 6. ご相談から完了までの流れ */}
       <section className="py-24 md:py-32 lg:py-40">

@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import ServiceDetailTemplate from "@/components/templates/ServiceDetailTemplate";
 import { getService } from "@/data/services";
+import { getSubServicesByParent } from "@/data/subServices";
 import { projects } from "@/data/projects";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -18,12 +19,14 @@ export default function CorporateRenovationConstructionPage() {
   if (!service) return notFound();
 
   const relatedProjects = projects.filter((p) => p.categoryLabel === service.relatedProjectCategory).slice(0, 3);
+  const relatedSubServices = getSubServicesByParent("corporate", "renovation-construction");
 
   return (
     <ServiceDetailTemplate
       service={service}
       breadcrumbs={[{ label: "法人のお客様", href: "/corporate" }, { label: service.title }]}
       relatedProjects={relatedProjects}
+      relatedSubServices={relatedSubServices}
     />
   );
 }

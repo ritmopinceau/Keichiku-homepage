@@ -1,5 +1,5 @@
 import type { BusinessCategory, SubService } from "./types";
-import { projectImages, subServiceImages, reformLifestyleImages } from "./placeholderImages";
+import { projectImages, subServiceImages, reformLifestyleImages, factoryImages } from "./placeholderImages";
 
 /**
  * 個人のお客様 > 住宅リフォーム の下にぶら下がる、工事内容別ページのデータ。
@@ -1107,6 +1107,64 @@ export const subServices: SubService[] = [
     ],
     relatedProjectCategory: "住宅リフォーム",
     metaDescription: "〇〇市の小規模修繕・修理なら拓工建設グループへ。水漏れ、建具の不具合など、小さな困りごとから気軽にご相談いただけます。",
+  },
+  {
+    parentCategory: "corporate",
+    parentSlug: "renovation-construction",
+    slug: "heat-shield-sheet",
+    title: "遮熱シート施工(工場・倉庫の暑さ対策)",
+    englishLabel: "Heat Shield Sheet",
+    icon: "Thermometer",
+    shortSummary: "屋根から伝わる熱を抑える遮熱シートで、エアコンだけに頼らない工場・倉庫の暑さ対策をご提案します。",
+    cardDescription: "熱中症・電気代対策に",
+    durationLabel: "建物の規模・仕様により異なります(現地調査でご案内)",
+    heroImage: factoryImages.warehouseInterior,
+    heroImageAlt: "倉庫内観",
+    overview: [
+      "工場や倉庫の暑さの多くは、金属製の屋根が受ける強い日差しが「輻射熱」として室内に伝わることが原因です。エアコンを増設しても、屋根から熱が入り続ける限り効率的に冷えにくいというケースが少なくありません。",
+      "遮熱シートは、太陽からの熱を反射し、屋根から室内へ伝わる熱そのものを抑える建築資材です。屋根の劣化状況や建物の構造を現地調査したうえで、施工の可否や期待できる効果をご提案します。",
+    ],
+    painPoints: [
+      "工場内が夏は40℃近くまで上がる",
+      "エアコンを増設しても涼しくならない",
+      "従業員の熱中症が心配",
+      "電気代だけが年々上がっている",
+      "工場を止めずに暑さ対策をしたい",
+    ],
+    workScopeItems: [
+      "屋根の現地調査・劣化診断",
+      "遮熱シートの施工",
+      "施工前後の効果予測のご説明",
+      "稼働しながらの施工計画",
+      "断熱・換気など他の暑さ対策とのご提案比較",
+    ],
+    priceRanges: [{ label: "遮熱シート施工", price: "建物の規模・屋根材により個別お見積り" }],
+    faqItems: [
+      {
+        id: "hss-aircon-only",
+        question: "エアコンだけではダメなのでしょうか？",
+        answer:
+          "エアコンは室内を冷やす設備ですが、屋根から大量の熱が入り続けると効率が下がることがあります。まず建物への熱の侵入を抑えることで、冷房効率の向上が期待できます。",
+      },
+      {
+        id: "hss-operating",
+        question: "工場を止めずに施工できますか？",
+        answer: "建物の構造や施工方法によっては、稼働しながら施工できる場合があります。現地調査のうえ、最適な施工方法をご提案します。",
+      },
+      {
+        id: "hss-survey-free",
+        question: "現地調査や見積もりはお願いできますか？",
+        answer: "現地調査を行い、建物の状況に合わせた施工方法をご提案します。費用や工期についても分かりやすくご説明いたします。",
+      },
+      {
+        id: "hss-union-member",
+        question: "西淀川工業会の会員ですが、割引はありますか？",
+        answer: "西淀川工業会会員様は、現地調査・効果予測・お見積もりを無料で承っています。お気軽にお問い合わせください。",
+      },
+    ],
+    relatedProjectCategory: "改修工事",
+    metaDescription:
+      "工場・倉庫の暑さ対策なら遮熱シート施工。屋根からの輻射熱を抑え、熱中症対策・電気代削減・作業環境改善へ。大阪市西淀川区の株式会社拓工建設が現地調査から対応します。",
   },
 ];
 
