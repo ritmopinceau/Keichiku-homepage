@@ -120,14 +120,18 @@ export const workLifeContent: Record<WorkLifeLang, WorkLifeContent> = {
     },
     process: {
       heading: "住まい探しの流れ",
-      steps: ["お問い合わせ", "勤務先・人数・希望条件を確認", "通勤しやすい物件をご提案", "内覧", "入居審査・契約", "入居"],
+      steps: ["お問い合わせ(勤務先企業様より)", "勤務先・人数・希望条件を確認", "通勤しやすい物件をご提案", "内覧", "入居審査・契約", "入居"],
     },
     faq: {
       heading: "よくある質問",
       items: [
         {
           question: "外国人でも賃貸住宅を借りられますか？",
-          answer: "物件や契約条件、審査内容によって異なります。勤務先や在留資格、入居人数などを確認しながら、ご相談可能な物件をご案内いたします。",
+          answer: "物件や契約条件、審査内容によって異なります。勤務先や在留資格、入居人数などを確認しながら、ご相談可能な物件をご案内いたします。なお、ご契約は勤務先の企業様を通じて進めていただきます。",
+        },
+        {
+          question: "部屋を借りる手続きは、自分で直接行うのですか？",
+          answer: "いいえ、ご契約は勤務先の企業様を通じて進めていただきます。ご本人が直接不動産会社とやり取りいただく必要はありません。",
         },
         {
           question: "ベトナムから日本へ来る前でも相談できますか？",
@@ -202,7 +206,7 @@ export const workLifeContent: Record<WorkLifeLang, WorkLifeContent> = {
     },
     reassurance: {
       heading: "We support your housing search, from your very first days in Japan",
-      body: "For those living in Japan for the first time, finding housing is one of the biggest sources of anxiety. Nittaku Sangyo is happy to consult based on your needs, whether that's proximity to your workplace, or living alone versus sharing a place with others.",
+      body: "For those living in Japan for the first time, finding housing is one of the biggest sources of anxiety. Rest assured — the housing search and contract are arranged through your employer company, so you won't need to deal directly with the real estate company yourself. Consultations can be tailored to your needs, such as proximity to your workplace or living alone versus sharing with others.",
       examples: ["Housing search based on your workplace or nearest station", "Consultation on rooms for one person or for sharing with others", "Guidance on the procedures needed to move in"],
       disclaimer: "※What we're able to offer varies by property and contract conditions. Please contact us for details.",
     },
@@ -222,14 +226,18 @@ export const workLifeContent: Record<WorkLifeLang, WorkLifeContent> = {
     },
     process: {
       heading: "Housing search process",
-      steps: ["Inquiry", "Confirm workplace, number of people, and preferences", "Property proposals based on commute convenience", "Viewing", "Screening & contract", "Move-in"],
+      steps: ["Inquiry (from your employer company)", "Confirm workplace, number of people, and preferences", "Property proposals based on commute convenience", "Viewing", "Screening & contract", "Move-in"],
     },
     faq: {
       heading: "Frequently Asked Questions",
       items: [
         {
           question: "Can foreign nationals rent housing?",
-          answer: "It depends on the property, contract conditions, and screening process. We'll check your workplace, residence status, and number of occupants, and introduce properties we can consult on.",
+          answer: "It depends on the property, contract conditions, and screening process. We'll check your workplace, residence status, and number of occupants, and introduce properties we can consult on. Please note that the contract itself is arranged through your employer company.",
+        },
+        {
+          question: "Do I need to handle the rental application myself?",
+          answer: "No, the contract is arranged through your employer company. You won't need to deal with the real estate company directly yourself.",
         },
         {
           question: "Can I consult before coming to Japan from Vietnam?",
@@ -303,7 +311,7 @@ export const workLifeContent: Record<WorkLifeLang, WorkLifeContent> = {
     },
     reassurance: {
       heading: "初到日本生活，我们也从住房开始为您提供支持",
-      body: "对于初次在日本生活的朋友来说，找房子是最大的担忧之一。新拓产业会根据您的需求，为您提供靠近工作单位的房源、单人居住或多人合住等方面的咨询服务。",
+      body: "对于初次在日本生活的朋友来说，找房子是最大的担忧之一。请放心，找房及签约将通过您的工作单位（雇主企业）进行，您本人无需直接与不动产公司交涉。我们会根据您的需求，如靠近工作单位或单人居住・多人合住等，提供相应咨询。",
       examples: ["根据工作单位或最近车站寻找房源", "单人居住・多人合住的房源咨询", "入住所需手续的相关咨询"],
       disclaimer: "※具体可提供的支持内容因房源和合同条件而异，详情请咨询我们。",
     },
@@ -323,14 +331,18 @@ export const workLifeContent: Record<WorkLifeLang, WorkLifeContent> = {
     },
     process: {
       heading: "找房流程",
-      steps: ["咨询", "确认工作单位・人数・希望条件", "提出便于通勤的房源方案", "实地看房", "审核・签约", "入住"],
+      steps: ["咨询（由工作单位提出）", "确认工作单位・人数・希望条件", "提出便于通勤的房源方案", "实地看房", "审核・签约", "入住"],
     },
     faq: {
       heading: "常见问题",
       items: [
         {
           question: "外国人也能租房吗？",
-          answer: "这取决于具体房源、合同条件及审核情况。我们会确认您的工作单位、在留资格、入住人数等信息，为您介绍可咨询的房源。",
+          answer: "这取决于具体房源、合同条件及审核情况。我们会确认您的工作单位、在留资格、入住人数等信息，为您介绍可咨询的房源。另外，合同将通过您的工作单位（雇主企业）办理。",
+        },
+        {
+          question: "租房手续需要我自己直接办理吗？",
+          answer: "不需要，合同将通过您的工作单位办理，您本人无需直接与不动产公司交涉。",
         },
         {
           question: "来日本之前可以先咨询吗？",
