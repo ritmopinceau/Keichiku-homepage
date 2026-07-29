@@ -13,9 +13,12 @@ export const languageLabels: Record<Locale | "ja", string> = {
   vi: "Tiếng Việt",
 };
 
+/** 翻訳ページを用意している日本語側のパス一覧。ここに追加すれば言語切り替えの対象になる。 */
+const translatedPaths = ["/", "/company", "/contact", "/work-and-life"];
+
 /**
  * 現在地に対応する言語版のURLを組み立てる。
- * /en, /zh, /vi は トップ・会社概要・お問い合わせ の3ページのみ用意しているため、
+ * /en, /zh, /vi は translatedPaths に挙げたページのみ用意しているため、
  * それ以外の日本語ページからは各言語のトップページへ、
  * /en/company 等の翻訳ページ間では対応するページへ切り替わる。
  */
@@ -24,7 +27,7 @@ export function resolveLocalePath(pathname: string, target: Locale | "ja"): stri
   let subPath = "/";
   if (match) {
     subPath = match[2] || "/";
-  } else if (pathname === "/company" || pathname === "/contact") {
+  } else if (translatedPaths.includes(pathname)) {
     subPath = pathname;
   }
   if (target === "ja") return subPath;
