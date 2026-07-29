@@ -18,7 +18,7 @@ function getIcon(name: string): LucideIcon {
   return (Icons as unknown as Record<string, LucideIcon>)[name] ?? Icons.Building2;
 }
 
-const langOrder: WorkLifeLang[] = ["ja", "easyJa", "vi"];
+const langOrder: WorkLifeLang[] = ["ja", "en", "zh", "vi"];
 
 export default function WorkAndLifeClient() {
   const [lang, setLang] = useState<WorkLifeLang>("ja");

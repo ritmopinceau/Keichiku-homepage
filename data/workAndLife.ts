@@ -411,7 +411,7 @@ export const workLifeContent: Record<WorkLifeLang, WorkLifeContent> = {
     },
     reassurance: {
       heading: "Hỗ trợ tìm nhà ở ngay từ những ngày đầu sinh sống tại Nhật Bản",
-      body: "Đối với người lần đầu sinh sống tại Nhật Bản, việc tìm nhà ở là một trong những điều lo lắng lớn. Nittaku Sangyo nhận tư vấn theo nhu cầu như nhà gần nơi làm việc, phòng ở một mình hoặc ở cùng nhiều người.",
+      body: "Đối với người lần đầu sinh sống tại Nhật Bản, việc tìm nhà ở là một trong những điều lo lắng lớn. Xin yên tâm, việc tìm nhà và ký hợp đồng sẽ được tiến hành thông qua công ty tuyển dụng (nơi làm việc), quý vị không cần trực tiếp trao đổi với công ty bất động sản. Chúng tôi sẽ tư vấn theo nhu cầu như nhà gần nơi làm việc, phòng ở một mình hoặc ở cùng nhiều người.",
       examples: ["Tìm nhà theo nơi làm việc hoặc ga tàu gần nhất", "Tư vấn phòng cho một người hoặc nhiều người ở chung", "Tư vấn các thủ tục cần thiết khi vào ở"],
       disclaimer: "※Nội dung hỗ trợ có thể khác nhau tùy theo từng căn hộ và điều kiện hợp đồng. Vui lòng liên hệ để biết chi tiết.",
     },
@@ -431,14 +431,18 @@ export const workLifeContent: Record<WorkLifeLang, WorkLifeContent> = {
     },
     process: {
       heading: "Quy trình tìm nhà ở",
-      steps: ["Liên hệ", "Xác nhận nơi làm việc, số người, điều kiện mong muốn", "Đề xuất nhà ở thuận tiện cho việc đi lại", "Xem nhà thực tế", "Thẩm định và ký hợp đồng", "Chuyển vào ở"],
+      steps: ["Liên hệ (do công ty tuyển dụng thực hiện)", "Xác nhận nơi làm việc, số người, điều kiện mong muốn", "Đề xuất nhà ở thuận tiện cho việc đi lại", "Xem nhà thực tế", "Thẩm định và ký hợp đồng", "Chuyển vào ở"],
     },
     faq: {
       heading: "Câu hỏi thường gặp",
       items: [
         {
           question: "Người nước ngoài có thể thuê nhà không?",
-          answer: "Tùy thuộc vào từng căn hộ, điều kiện hợp đồng và thẩm định. Chúng tôi sẽ xác nhận nơi làm việc, tư cách lưu trú, số người ở và giới thiệu những căn hộ có thể tư vấn.",
+          answer: "Tùy thuộc vào từng căn hộ, điều kiện hợp đồng và thẩm định. Chúng tôi sẽ xác nhận nơi làm việc, tư cách lưu trú, số người ở và giới thiệu những căn hộ có thể tư vấn. Xin lưu ý hợp đồng sẽ được thực hiện thông qua doanh nghiệp tuyển dụng.",
+        },
+        {
+          question: "Tôi có cần tự mình làm thủ tục thuê nhà không?",
+          answer: "Không, hợp đồng sẽ được tiến hành thông qua công ty nơi bạn làm việc. Bạn không cần trực tiếp trao đổi với công ty bất động sản.",
         },
         {
           question: "Có thể tư vấn trước khi đến Nhật từ Việt Nam không?",
