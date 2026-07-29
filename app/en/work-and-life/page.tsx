@@ -2,12 +2,12 @@ import WorkAndLifeContent from "@/components/work-and-life/WorkAndLifeContent";
 import { workLifeContent } from "@/data/workAndLife";
 import { buildMetadata } from "@/lib/metadata";
 
-const content = workLifeContent.ja;
+const content = workLifeContent.en;
 
 export const metadata = buildMetadata({
   title: content.metaTitle,
   description: content.metaDescription,
-  path: "/work-and-life",
+  path: "/en/work-and-life",
   languageAlternates: {
     ja: "/work-and-life",
     en: "/en/work-and-life",
@@ -17,6 +17,6 @@ export const metadata = buildMetadata({
   },
 });
 
-export default function WorkAndLifePage() {
-  return <WorkAndLifeContent lang="ja" />;
+export default function EnglishWorkAndLifePage() {
+  return <WorkAndLifeContent lang="en" />;
 }

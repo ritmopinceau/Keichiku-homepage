@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import * as Icons from "lucide-react";
@@ -10,7 +7,7 @@ import SectionTitle from "@/components/sections/SectionTitle";
 import Reveal from "@/components/sections/Reveal";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import WorkLifeMap from "@/components/sections/WorkLifeMap";
-import { workLifeContent, workLifeLangLabels, type WorkLifeLang } from "@/data/workAndLife";
+import { workLifeContent, type WorkLifeLang } from "@/data/workAndLife";
 import { workLifeImages, propertyImages } from "@/data/placeholderImages";
 import { siteConfig } from "@/data/siteConfig";
 
@@ -18,33 +15,21 @@ function getIcon(name: string): LucideIcon {
   return (Icons as unknown as Record<string, LucideIcon>)[name] ?? Icons.Building2;
 }
 
-const langOrder: WorkLifeLang[] = ["ja", "en", "zh", "vi"];
+interface WorkAndLifeContentProps {
+  lang: WorkLifeLang;
+}
 
-export default function WorkAndLifeClient() {
-  const [lang, setLang] = useState<WorkLifeLang>("ja");
+/**
+ * 「西淀川区で働く・暮らす」ページの本体。言語ごとに /work-and-life, /en/work-and-life,
+ * /zh/work-and-life, /vi/work-and-life という別URLを用意し、サイト共通のヘッダー
+ * 言語切り替え(LanguageSwitcher)から遷移する構成のため、このコンポーネント自体は
+ * 言語切り替えUIを持たない。
+ */
+export default function WorkAndLifeContent({ lang }: WorkAndLifeContentProps) {
   const content = workLifeContent[lang];
 
   return (
     <>
-      {/* 言語切り替え */}
-      <div className="sticky top-16 md:top-[76px] z-40 bg-white border-b border-black/5">
-        <div className="container-content py-2.5 flex items-center justify-center gap-1">
-          {langOrder.map((code) => (
-            <button
-              key={code}
-              type="button"
-              onClick={() => setLang(code)}
-              aria-pressed={lang === code}
-              className={`min-h-[36px] px-4 rounded-full text-sm font-medium transition-colors ${
-                lang === code ? "bg-navy text-white" : "text-charcoal-dark hover:bg-greige-light"
-              }`}
-            >
-              {workLifeLangLabels[code]}
-            </button>
-          ))}
-        </div>
-      </div>
-
       {/* 1. ファーストビュー */}
       <section className="relative min-h-[560px] md:min-h-[680px] w-full overflow-hidden bg-charcoal-dark flex flex-col">
         <Image

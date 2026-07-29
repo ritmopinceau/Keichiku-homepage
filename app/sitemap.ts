@@ -22,12 +22,15 @@ const staticPaths = [
   "/en",
   "/en/company",
   "/en/contact",
+  "/en/work-and-life",
   "/zh",
   "/zh/company",
   "/zh/contact",
+  "/zh/work-and-life",
   "/vi",
   "/vi/company",
   "/vi/contact",
+  "/vi/work-and-life",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
