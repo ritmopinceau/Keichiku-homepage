@@ -5,6 +5,7 @@ import SectionTitle from "@/components/sections/SectionTitle";
 import Reveal from "@/components/sections/Reveal";
 import FlowSteps from "@/components/sections/FlowSteps";
 import ContactBanner from "@/components/sections/ContactBanner";
+import WorkLifeCallout from "@/components/sections/WorkLifeCallout";
 import BusinessEntryCard from "@/components/cards/BusinessEntryCard";
 import StrengthCard from "@/components/cards/StrengthCard";
 import ServiceCard from "@/components/cards/ServiceCard";
@@ -242,6 +243,8 @@ export default function HomePage() {
           </ul>
         </div>
       </section>
+
+      <WorkLifeCallout />
 
       <ContactBanner />
     </>

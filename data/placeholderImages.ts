@@ -110,3 +110,10 @@ export const factoryImages = {
   warehouseInterior: unsplash("photo-1553413077-190dd305871c"),
   warehouseAisle: unsplash("photo-1587293852726-70cdb56c2866"),
 };
+
+// /work-and-life(西淀川区で働く・暮らす)ページで使用する画像
+export const workLifeImages = {
+  osakaStreet: unsplash("photo-1590559899731-a382839e5549", 1920),
+  kyotoStreet: unsplash("photo-1493976040374-85c8e12f0c0e", 1600),
+  marketProduce: unsplash("photo-1542838132-92c53300491e", 1200),
+};

@@ -18,6 +18,7 @@ const staticPaths = [
   "/company",
   "/contact",
   "/privacy",
+  "/work-and-life",
   "/en",
   "/en/company",
   "/en/contact",

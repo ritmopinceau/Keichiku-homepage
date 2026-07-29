@@ -2,6 +2,7 @@ import PageHero from "@/components/sections/PageHero";
 import Reveal from "@/components/sections/Reveal";
 import ContactBanner from "@/components/sections/ContactBanner";
 import ServiceLandingCard from "@/components/cards/ServiceLandingCard";
+import WorkLifeCallout from "@/components/sections/WorkLifeCallout";
 import { getServicesByCategory } from "@/data/services";
 import { heroImages } from "@/data/placeholderImages";
 import { buildMetadata } from "@/lib/metadata";
@@ -40,6 +41,8 @@ export default function CorporatePage() {
           ))}
         </div>
       </section>
+
+      <WorkLifeCallout />
 
       <ContactBanner />
     </>
